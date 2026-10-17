@@ -1,0 +1,4 @@
+run_id,timestamp,model_name,provider,tier,prompt_preview,json_syntax_valid,pydantic_valid,matlab_status,failure_stage,error_message,run_dir
+20261017_124211_gemini-3.1-flash-lite,20261017_124211,gemini-3.1-flash-lite,google,lite-prototype,"Create a 4-bus AC ring network (lines 1-2, 2-3, 3-1) plus a ...",True,True,UNSTABLE,NONE,,eval_results/runs/20261017_124211_gemini-3.1-flash-lite
+20261017_124702_gemini-3.6-flash,20261017_124702,gemini-3.6-flash,google,strong-workhorse,"Create a 4-bus AC ring network (lines 1-2, 2-3, 3-1) plus a ...",True,True,UNSTABLE,NONE,,eval_results/runs/20261017_124702_gemini-3.6-flash
+20261017_125015_qwen3.8-27b,20261017_125015,qwen3.8-27b,groq,balanced-fast,"Create a 4-bus AC ring network (lines 1-2, 2-3, 3-1) plus a ...",True,True,STABLE,NONE,,eval_results/runs/20261017_125015_qwen3.8-27b

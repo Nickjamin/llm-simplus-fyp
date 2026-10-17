@@ -1,0 +1,1 @@
+Create a 4-bus AC ring network (lines 1-2, 2-3, 3-1) plus a radial transformer line from 3 to 4 (turns ratio 0.99). Put synchronous generators on Buses 1 and 2, a GFM inverter on Bus 3, and a GFL inverter on Bus 4. Include shunt loads on all 4 buses.
