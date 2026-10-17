@@ -1,0 +1,1 @@
+Create a simple 2-bus radial AC network. Connect Bus 1 to Bus 2 with a single network line. Place a synchronous generator on Bus 1 and a shunt load on Bus 2.

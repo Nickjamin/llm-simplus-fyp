@@ -2,29 +2,23 @@ import csv
 from datetime import datetime
 import json
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List
 
 RESULTS_DIR = Path("eval_results")
 RUNS_DIR = RESULTS_DIR / "runs"
 CSV_PATH = RESULTS_DIR / "results.csv"
 
+# Updated to the flattened "wide" format
 CSV_FIELDS = [
-    "run_id",
-    "timestamp",
-    "model_name",
-    "provider",
-    "tier",
-    "prompt_preview",
-    "json_syntax_valid",
-    "pydantic_valid",
-    "matlab_status",        # e.g., "SKIPPED", "SOLVED", "UNSTABLE", "SYNTAX_ERROR"
-    "failure_stage",        # "NONE", "API", "JSON_DECODE", "PYDANTIC", "MATLAB"
-    "error_message",
+    "run_id", "timestamp", "model_name", "provider", "tier", 
+    "prompt_name", "prompt_preview", "api_status", "iterations_needed",
+    "it1_json_syntax_valid", "it1_pydantic_valid", "it1_matlab_status", "it1_failure_stage", "it1_error_message",
+    "it2_json_syntax_valid", "it2_pydantic_valid", "it2_matlab_status", "it2_failure_stage", "it2_error_message",
+    "it3_json_syntax_valid", "it3_pydantic_valid", "it3_matlab_status", "it3_failure_stage", "it3_error_message",
     "run_dir"
 ]
 
 def init_tracker():
-    """Creates evaluation directories and initializes the CSV header if needed."""
     RUNS_DIR.mkdir(parents=True, exist_ok=True)
     if not CSV_PATH.exists():
         with open(CSV_PATH, mode="w", newline="", encoding="utf-8") as f:
@@ -35,15 +29,11 @@ def log_evaluation_run(
     model_name: str,
     provider: str,
     tier: str,
+    prompt_name: str,
     prompt: str,
-    raw_response: Optional[str] = None,
-    json_syntax_valid: bool = False,
-    pydantic_valid: bool = False,
-    compiled_data: Optional[Dict[str, Any]] = None,
-    matlab_status: str = "SKIPPED",
-    failure_stage: str = "NONE",
-    error_message: str = "",
-    matlab_log: str = ""
+    api_status: str,
+    iterations_needed: int,
+    iteration_data: List[Dict[str, Any]]
 ):
     init_tracker()
 
@@ -53,35 +43,45 @@ def log_evaluation_run(
     run_dir = RUNS_DIR / run_id
     run_dir.mkdir(parents=True, exist_ok=True)
 
-    # Save artifact files
+    # Save the original prompt once
     (run_dir / "prompt.txt").write_text(prompt, encoding="utf-8")
-    
-    if raw_response is not None:
-        (run_dir / "raw_response.txt").write_text(raw_response, encoding="utf-8")
-    
-    if compiled_data is not None:
-        (run_dir / "UserData.json").write_text(
-            json.dumps(compiled_data, indent=2), encoding="utf-8"
-        )
-        
-    if matlab_log:
-        (run_dir / "matlab_output.log").write_text(matlab_log, encoding="utf-8")
 
-    # Append row to CSV
     row = {
         "run_id": run_id,
         "timestamp": timestamp,
         "model_name": model_name,
         "provider": provider,
         "tier": tier,
+        "prompt_name": prompt_name,
         "prompt_preview": (prompt[:60] + "...") if len(prompt) > 60 else prompt,
-        "json_syntax_valid": json_syntax_valid,
-        "pydantic_valid": pydantic_valid,
-        "matlab_status": matlab_status,
-        "failure_stage": failure_stage,
-        "error_message": error_message.replace("\n", " ")[:200],
+        "api_status": api_status,
+        "iterations_needed": iterations_needed,
         "run_dir": str(run_dir)
     }
+
+    # Initialize all iteration columns to empty strings/defaults
+    for i in range(1, 4):
+        row[f"it{i}_json_syntax_valid"] = ""
+        row[f"it{i}_pydantic_valid"] = ""
+        row[f"it{i}_matlab_status"] = ""
+        row[f"it{i}_failure_stage"] = ""
+        row[f"it{i}_error_message"] = ""
+
+    # Populate the wide columns and save iteration-specific artifacts
+    for idx, it in enumerate(iteration_data):
+        i = idx + 1  # 1-indexed for columns (it1, it2, it3)
+        row[f"it{i}_json_syntax_valid"] = it.get("json_syntax_valid", False)
+        row[f"it{i}_pydantic_valid"] = it.get("pydantic_valid", False)
+        row[f"it{i}_matlab_status"] = it.get("matlab_status", "SKIPPED")
+        row[f"it{i}_failure_stage"] = it.get("failure_stage", "NONE")
+        row[f"it{i}_error_message"] = str(it.get("error_message", "")).replace("\n", " ")[:200]
+
+        if it.get("raw_response"):
+            (run_dir / f"it{i}_raw_response.txt").write_text(it["raw_response"], encoding="utf-8")
+        if it.get("compiled_data"):
+            (run_dir / f"it{i}_UserData.json").write_text(json.dumps(it["compiled_data"], indent=2), encoding="utf-8")
+        if it.get("matlab_log"):
+            (run_dir / f"it{i}_matlab_output.log").write_text(it["matlab_log"], encoding="utf-8")
 
     with open(CSV_PATH, mode="a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=CSV_FIELDS)

@@ -1,0 +1,1 @@
+I need a 4-bus power system. Put a load on Bus 4 and a GFL inverter on Bus 2. Make sure the main grid connection is on Bus 1. Also, connect 1 to 2, 2 to 3, and 3 to 4. Leave Bus 3 empty. Finally, add a DC microgrid attached to Bus 4.

@@ -1,0 +1,1 @@
+Design a 5-bus AC grid. Bus 1 is the slack bus with an infinite bus connection. Buses 2, 3, and 4 form a ring network. Bus 5 is connected radially to Bus 4. Place a Grid-Forming (GFM) inverter on Bus 2, a Grid-Following (GFL) inverter on Bus 4, and battery energy storage (BESS) on Bus 5. Add shunt loads on buses 3 and 5.
