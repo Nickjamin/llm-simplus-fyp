@@ -48,7 +48,8 @@ def run_evaluation(
     eng, 
     run_idx: int = 1, 
     total_runs: int = 1,
-    delay_sec: int = 15
+    delay_sec: int = 15,
+    show_plots: bool = False
 ):
     """Handles the 3-iteration evaluation loop for a model/prompt combination with in-place terminal updates."""
     model_cfg = MODELS[selected_model_key]
@@ -182,7 +183,10 @@ def run_evaluation(
                 it_state["error_message"] = "MATLAB engine is dead."
                 raise RuntimeError("MATLAB Engine Dead")
 
-            m_success, m_out, m_err, m_errmsg, eng = run_simplus_headless(eng, str(SIMPLUS_DIR), timeout_sec=60)
+            # Pass the show_plots flag to the run_simplus_headless function
+            m_success, m_out, m_err, m_errmsg, eng = run_simplus_headless(
+                eng, str(SIMPLUS_DIR), timeout_sec=60, show_plots=show_plots
+            )
             it_state["matlab_log"] = m_out + "\n" + m_err
             
             # Catch if engine crashed during this run's execution/recovery
@@ -200,6 +204,10 @@ def run_evaluation(
                     it_state["matlab_status"] = "SOLVED"
                     final_status = "SOLVED"
                 iteration_data.append(it_state)
+                
+                if show_plots:
+                    prompt_input(f"\n\n[PAUSE] {final_status}: Review MATLAB figures, then press Enter to continue...")
+                    
                 break
             else:
                 it_state["matlab_status"] = "SYNTAX_ERROR"
@@ -257,6 +265,7 @@ def main():
     parser.add_argument("--prompt", type=str, help="Specific prompt name or 'all' to batch evaluate all prompts.")
     parser.add_argument("--delay", type=int, default=15, help="Seconds to wait between API calls to prevent 429 rate limits.")
     parser.add_argument("--prompt-file", type=str, default="prompts_examples.json", help="specific prompt json file to use")
+    parser.add_argument("--show-plots", action="store_true", help="Show MATLAB figure windows and plots.")
     args = parser.parse_args()
 
     prompts_db = get_prompts_db(args.prompt_file)
@@ -322,14 +331,18 @@ def main():
                 print("Invalid input. Please enter a valid number.")
 
     total_runs = len(models_to_run) * len(prompts_to_run)
-    eng = start_matlab_engine()
+    eng = start_matlab_engine(show_plots=args.show_plots)
     
     print(f"\n[EVAL] Running {total_runs} test combinations...\n")
     run_idx = 1
     try:
         for prompt_name, prompt_text in prompts_to_run:
             for model_key in models_to_run:
-                eng = run_evaluation(model_key, prompt_name, prompt_text, eng, run_idx=run_idx, total_runs=total_runs, delay_sec=args.delay)
+                eng = run_evaluation(
+                    model_key, prompt_name, prompt_text, eng, 
+                    run_idx=run_idx, total_runs=total_runs, 
+                    delay_sec=args.delay, show_plots=args.show_plots
+                )
                 run_idx += 1
     finally:
         print("\n[MATLAB] Closing engine...")

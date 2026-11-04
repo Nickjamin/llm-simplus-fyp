@@ -25,12 +25,16 @@ def force_kill_matlab(eng=None):
     except Exception as e:
         print(f"[MATLAB] Failed to force kill: {e}")
 
-def start_matlab_engine(retries=3):
+def start_matlab_engine(retries=3, show_plots=False):
     """Starts a persistent MATLAB engine instance for batch execution with retries."""
     print("[MATLAB] Starting persistent engine...")
+    
+    # Toggle the noFigureWindows flag based on the user's choice
+    engine_flags = '-nodesktop -nosplash' if show_plots else '-nodesktop -nosplash -noFigureWindows'
+    
     for attempt in range(retries):
         try:
-            eng = matlab.engine.start_matlab('-nodesktop -nosplash -noFigureWindows')
+            eng = matlab.engine.start_matlab(engine_flags)
             if eng is not None:
                 return eng
         except Exception as e:
@@ -39,7 +43,7 @@ def start_matlab_engine(retries=3):
     print("[MATLAB] CRITICAL: Failed to initialize engine.")
     return None
 
-def ensure_healthy_engine(eng):
+def ensure_healthy_engine(eng, show_plots=False):
     """Pings the engine workspace. If dead or contaminated, kills and restarts it."""
     if eng is not None:
         try:
@@ -49,16 +53,16 @@ def ensure_healthy_engine(eng):
             pass
     
     force_kill_matlab(eng)
-    return start_matlab_engine()
+    return start_matlab_engine(show_plots=show_plots)
 
-def run_simplus_headless(eng, simplus_dir: str, timeout_sec: int = 60):
+def run_simplus_headless(eng, simplus_dir: str, timeout_sec: int = 60, show_plots=False):
     """Executes UserMain.m using a pre-existing MATLAB engine instance."""
     out = io.StringIO()
     err = io.StringIO()
     success = False
     error_msg = ""
     
-    eng = ensure_healthy_engine(eng)
+    eng = ensure_healthy_engine(eng, show_plots=show_plots)
     if eng is None:
         return False, "", "", "MATLAB engine is dead and could not be restarted.", None
 
@@ -77,7 +81,7 @@ def run_simplus_headless(eng, simplus_dir: str, timeout_sec: int = 60):
                 
                 # Pass the engine reference to be disarmed before the kill
                 force_kill_matlab(eng)
-                eng = start_matlab_engine()
+                eng = start_matlab_engine(show_plots=show_plots)
                 
     except matlab.engine.MatlabExecutionError as e:
         error_msg = str(e)
