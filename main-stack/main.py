@@ -283,8 +283,14 @@ def main():
         print("\n    -----------  Available Models  -----------    ")
         for num, key in model_choices.items():
             print(f"{num:>2}: {key:<26} [{MODELS[key].get('tier')}]")
-        user_input = prompt_input("\nChoose model (number): ")
-        models_to_run = [model_choices.get(user_input, list(MODELS.keys())[0])]
+        
+        # Input Validation Loop for Models
+        while True:
+            user_input = prompt_input("\nChoose model (number): ")
+            if user_input in model_choices:
+                models_to_run = [model_choices[user_input]]
+                break
+            print(f"Invalid input. Please enter a number between 1 and {len(model_choices)}.")
 
     # Determine Prompts
     if args.prompt == "all":
@@ -294,15 +300,26 @@ def main():
     else:
         options = []
         print("\n    -----------  Available Prompts  -----------    ")
+        print(" 0: [Write manual prompt]")
         for idx, (name, data) in enumerate(prompts_db.items(), start=1):
             options.append((name, data.get("high_level", "")))
             print(f"{idx:>2}: {name}")
-        user_input = prompt_input("\nChoose prompt (number): ")
-        try:
-            choice = int(user_input)
-            prompts_to_run = [options[choice - 1]]
-        except (ValueError, IndexError):
-            prompts_to_run = [options[0]]
+        
+        while True:
+            user_input = prompt_input("\nChoose prompt (number): ")
+            try:
+                choice = int(user_input)
+                if choice == 0:
+                    custom_prompt = prompt_input("\nEnter your custom prompt: ")
+                    prompts_to_run = [("custom_manual_prompt", custom_prompt)]
+                    break
+                elif 1 <= choice <= len(options):
+                    prompts_to_run = [options[choice - 1]]
+                    break
+                else:
+                    print(f"Invalid choice. Please enter a number between 0 and {len(options)}.")
+            except ValueError:
+                print("Invalid input. Please enter a valid number.")
 
     total_runs = len(models_to_run) * len(prompts_to_run)
     eng = start_matlab_engine()
