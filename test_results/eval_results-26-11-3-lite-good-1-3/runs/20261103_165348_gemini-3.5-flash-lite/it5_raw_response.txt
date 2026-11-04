@@ -1,0 +1,73 @@
+{
+  "Basic": {
+    "Fs": 25000,
+    "Fbase": 50.0,
+    "Sbase": 1.0,
+    "Vbase": 1.0
+  },
+  "Advance": {
+    "DiscretizationMethod": 2,
+    "PowerFlowAlgorithm": 1,
+    "EnableCreateSimulinkModel": 0,
+    "EnablePrintOutput": 0,
+    "EnablePlotPole": 0,
+    "EnablePlotAdmittance": 0
+  },
+  "Bus": [
+    {
+      "BusNo": 1,
+      "BusType": 1,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 1.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 2,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.5,
+      "QLi": 0.1,
+      "AreaNo": 1,
+      "AcDc": 1
+    }
+  ],
+  "NetworkLine": [
+    {
+      "FromBus": 1,
+      "ToBus": 2,
+      "R": 0.01,
+      "wL": 0.1,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 1,
+      "ToBus": 1,
+      "R": "NaN",
+      "wL": "NaN",
+      "wC": 0.01,
+      "G": 0.0
+    }
+  ],
+  "Apparatus": [
+    {
+      "BusNo": 1,
+      "Type": 0,
+      "ParaOverrides": null
+    },
+    {
+      "BusNo": 2,
+      "Type": 100,
+      "ParaOverrides": null
+    }
+  ]
+}

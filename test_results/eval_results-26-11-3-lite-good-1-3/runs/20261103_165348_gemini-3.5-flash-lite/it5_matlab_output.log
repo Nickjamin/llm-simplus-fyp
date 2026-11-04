@@ -1,0 +1,66 @@
+
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+Print power flow result:
+The format below is "| bus | P | Q | V | angle | omega |". P and Q are in load convention.
+
+ListPowerFlow =
+
+    1.0000   -0.5027   -0.1169    1.0000         0  314.1593
+    2.0000    0.5000    0.1000    0.9835   -0.0498  314.1593
+
+Get the descriptor state space model of network lines...
+Get the descriptor state space model of bus apparatuses...
+Get the appended descriptor state space model of all apparatuses...
+Get the descriptor state space model of whole system...
+Check if the whole system is proper:
+Proper!
+Calculate the minimum realization of the system model for later use...
+
+Print state space model: 
+Whole system port model (descriptor state space): GsysDss
+Other models saved in workspace: 
+Whole system port model (state space): GsysSs
+Whole system admittance model (descriptor state space): YsysDss
+Whole system admittance model (state space): YsysSs
+
+Calculate pole/zero...
+Check if the system is stable:
+Stable!
+
+==================================
+Plot Fundamentals 
+==================================
+
+Plot Fundamentals:
+Warning: The plot of pole map is disabled.
+Warning: The plot of admittance spectrum is disabled.
+
+==================================
+Grid Strength Analysis
+==================================
+Plot grid strength.
+
+==================================
+Synchronization Analysis
+==================================
+Warning: The synchronisation analysis is disabled.
+
+=================================
+Simulink Model
+=================================
+Warning: The auto creation of simulink model is disabled.
+
+==================================
+End: Run Successfully.
+==================================
+

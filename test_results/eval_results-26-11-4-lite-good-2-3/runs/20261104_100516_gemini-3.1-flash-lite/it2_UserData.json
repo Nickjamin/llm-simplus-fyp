@@ -1,0 +1,1219 @@
+{
+  "Basic": {
+    "Fs": 30000,
+    "Fbase": 60.0,
+    "Sbase": 100000000.0,
+    "Vbase": 345000.0
+  },
+  "Advance": {
+    "DiscretizationMethod": 2,
+    "LinearizationTimes": 1,
+    "DiscretizationDampingFlag": 1,
+    "DirectFeedthrough": 0,
+    "PowerFlowAlgorithm": 2,
+    "EnableCreateSimulinkModel": 0,
+    "EnablePlotPole": 0,
+    "EnablePlotAdmittance": 0,
+    "EnablePrintOutput": 1
+  },
+  "Bus": [
+    {
+      "BusNo": 1,
+      "BusType": 1,
+      "Voltage": 1.03,
+      "Theta": 0.0,
+      "PGi": 10.0,
+      "QGi": 0.0,
+      "PLi": 11.04,
+      "QLi": 2.5,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 2,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 3,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 4,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 5,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 6,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 7,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 8,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 9,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 10,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 11,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 12,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 13,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 14,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 15,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 16,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 17,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 18,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 19,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 20,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 21,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 22,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 23,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 24,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 25,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 26,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 27,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 28,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 29,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 30,
+      "BusType": 2,
+      "Voltage": 1.0475,
+      "Theta": 0.0,
+      "PGi": 2.5,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 31,
+      "BusType": 2,
+      "Voltage": 0.982,
+      "Theta": 0.0,
+      "PGi": 5.729,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 32,
+      "BusType": 2,
+      "Voltage": 0.9831,
+      "Theta": 0.0,
+      "PGi": 6.5,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 33,
+      "BusType": 2,
+      "Voltage": 0.9972,
+      "Theta": 0.0,
+      "PGi": 6.32,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 34,
+      "BusType": 2,
+      "Voltage": 1.0123,
+      "Theta": 0.0,
+      "PGi": 5.08,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 35,
+      "BusType": 2,
+      "Voltage": 1.0493,
+      "Theta": 0.0,
+      "PGi": 6.5,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 36,
+      "BusType": 2,
+      "Voltage": 1.0635,
+      "Theta": 0.0,
+      "PGi": 5.6,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 37,
+      "BusType": 2,
+      "Voltage": 1.0278,
+      "Theta": 0.0,
+      "PGi": 5.4,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 38,
+      "BusType": 2,
+      "Voltage": 1.0265,
+      "Theta": 0.0,
+      "PGi": 8.3,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 39,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    }
+  ],
+  "NetworkLine": [
+    {
+      "FromBus": 1,
+      "ToBus": 2,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 2,
+      "ToBus": 3,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 3,
+      "ToBus": 4,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 4,
+      "ToBus": 5,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 5,
+      "ToBus": 6,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 6,
+      "ToBus": 7,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 7,
+      "ToBus": 8,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 8,
+      "ToBus": 9,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 9,
+      "ToBus": 10,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 10,
+      "ToBus": 11,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 11,
+      "ToBus": 12,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 12,
+      "ToBus": 13,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 13,
+      "ToBus": 14,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 14,
+      "ToBus": 15,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 15,
+      "ToBus": 16,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 16,
+      "ToBus": 17,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 17,
+      "ToBus": 18,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 18,
+      "ToBus": 19,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 19,
+      "ToBus": 20,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 20,
+      "ToBus": 21,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 21,
+      "ToBus": 22,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 22,
+      "ToBus": 23,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 23,
+      "ToBus": 24,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 24,
+      "ToBus": 25,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 25,
+      "ToBus": 26,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 26,
+      "ToBus": 27,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 27,
+      "ToBus": 28,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 28,
+      "ToBus": 29,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 29,
+      "ToBus": 39,
+      "R": 0.001,
+      "wL": 0.01,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 2,
+      "ToBus": 30,
+      "R": 0.005,
+      "wL": 0.05,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.025
+    },
+    {
+      "FromBus": 31,
+      "ToBus": 6,
+      "R": 0.005,
+      "wL": 0.05,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 0.9
+    },
+    {
+      "FromBus": 19,
+      "ToBus": 33,
+      "R": 0.005,
+      "wL": 0.05,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.05
+    },
+    {
+      "FromBus": 20,
+      "ToBus": 34,
+      "R": 0.005,
+      "wL": 0.05,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.05
+    },
+    {
+      "FromBus": 22,
+      "ToBus": 35,
+      "R": 0.005,
+      "wL": 0.05,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.07
+    },
+    {
+      "FromBus": 23,
+      "ToBus": 36,
+      "R": 0.005,
+      "wL": 0.05,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.07
+    },
+    {
+      "FromBus": 25,
+      "ToBus": 37,
+      "R": 0.005,
+      "wL": 0.05,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.07
+    },
+    {
+      "FromBus": 29,
+      "ToBus": 38,
+      "R": 0.005,
+      "wL": 0.05,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.07
+    },
+    {
+      "FromBus": 32,
+      "ToBus": 3,
+      "R": 0.005,
+      "wL": 0.05,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    }
+  ],
+  "NetworkLineIEEE": [],
+  "Apparatus": [
+    {
+      "BusNo": 1,
+      "Type": 11,
+      "Para": {
+        "V_dc": 2.2,
+        "C_dc": 2.2,
+        "f_v_dc": 0.01,
+        "wLf": 0.03,
+        "R": 0.01,
+        "f_pll": 5.0,
+        "f_tau_pll": 300.0,
+        "f_i_dq": 600.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 2,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 3,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 4,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 5,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 6,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 7,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 8,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 9,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 10,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 11,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 12,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 13,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 14,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 15,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 16,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 17,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 18,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 19,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 20,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 21,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 22,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 23,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 24,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 25,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 26,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 27,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 28,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 29,
+      "Type": 100,
+      "Para": []
+    },
+    {
+      "BusNo": 30,
+      "Type": 20,
+      "Para": {
+        "wLf": 0.05,
+        "Rf": 0.0,
+        "wCf": 0.02,
+        "wLc": 0.1,
+        "Rc": 0.0,
+        "Xov": 0.0,
+        "Dw": 50.0,
+        "fdroop": 4.2,
+        "fvdq": 300.0,
+        "fidq": 1000.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 31,
+      "Type": 20,
+      "Para": {
+        "wLf": 0.05,
+        "Rf": 0.0,
+        "wCf": 0.02,
+        "wLc": 0.1,
+        "Rc": 0.0,
+        "Xov": 0.0,
+        "Dw": 50.0,
+        "fdroop": 3.03,
+        "fvdq": 300.0,
+        "fidq": 1000.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 32,
+      "Type": 20,
+      "Para": {
+        "wLf": 0.05,
+        "Rf": 0.0,
+        "wCf": 0.02,
+        "wLc": 0.1,
+        "Rc": 0.0,
+        "Xov": 0.0,
+        "Dw": 50.0,
+        "fdroop": 3.58,
+        "fvdq": 300.0,
+        "fidq": 1000.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 33,
+      "Type": 20,
+      "Para": {
+        "wLf": 0.05,
+        "Rf": 0.0,
+        "wCf": 0.02,
+        "wLc": 0.1,
+        "Rc": 0.0,
+        "Xov": 0.0,
+        "Dw": 50.0,
+        "fdroop": 2.86,
+        "fvdq": 300.0,
+        "fidq": 1000.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 34,
+      "Type": 20,
+      "Para": {
+        "wLf": 0.05,
+        "Rf": 0.0,
+        "wCf": 0.02,
+        "wLc": 0.1,
+        "Rc": 0.0,
+        "Xov": 0.0,
+        "Dw": 50.0,
+        "fdroop": 2.6,
+        "fvdq": 300.0,
+        "fidq": 1000.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 35,
+      "Type": 11,
+      "Para": {
+        "V_dc": 2.2,
+        "C_dc": 2.2,
+        "f_v_dc": 0.01,
+        "wLf": 0.03,
+        "R": 0.01,
+        "f_pll": 5.0,
+        "f_tau_pll": 300.0,
+        "f_i_dq": 600.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 36,
+      "Type": 11,
+      "Para": {
+        "V_dc": 2.2,
+        "C_dc": 2.2,
+        "f_v_dc": 0.01,
+        "wLf": 0.03,
+        "R": 0.01,
+        "f_pll": 5.0,
+        "f_tau_pll": 300.0,
+        "f_i_dq": 600.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 37,
+      "Type": 11,
+      "Para": {
+        "V_dc": 2.2,
+        "C_dc": 2.2,
+        "f_v_dc": 0.01,
+        "wLf": 0.03,
+        "R": 0.01,
+        "f_pll": 5.0,
+        "f_tau_pll": 300.0,
+        "f_i_dq": 600.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 38,
+      "Type": 11,
+      "Para": {
+        "V_dc": 2.2,
+        "C_dc": 2.2,
+        "f_v_dc": 0.01,
+        "wLf": 0.03,
+        "R": 0.01,
+        "f_pll": 5.0,
+        "f_tau_pll": 300.0,
+        "f_i_dq": 600.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 39,
+      "Type": 100,
+      "Para": []
+    }
+  ]
+}

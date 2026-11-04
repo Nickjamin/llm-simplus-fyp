@@ -1,0 +1,1 @@
+Build the WSCC 3-machine 9-bus benchmark at 60Hz. Replace the generator at Bus 2 with a Battery Energy Storage System (Type 30) using standard defaults. Maintain all standard WSCC line impedances and load values for the rest of the network.

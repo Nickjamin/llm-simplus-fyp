@@ -1,0 +1,12 @@
+Configure a single grid-following (GFL) inverter connected to an infinite grid in SimplusGT.
+
+Topology:
+- 50 Hz base frequency, 50 kHz sampling rate, Gauss-Seidel power flow.
+- Bus 1 is an infinite bus operating as the slack bus at 1.0 pu voltage.
+- Bus 2 is a PQ bus hosting a grid-following inverter injecting 0.5 pu active power at unity power factor.
+- The transmission line between Bus 1 and Bus 2 has series resistance R = 0.06 pu and inductive reactance wL = 0.3 pu.
+- Bus 2 has a shunt capacitor of susceptance wC = 0.02 pu connected to ground.
+
+Apparatus:
+- Bus 1: Infinite Bus (Type 90).
+- Bus 2: GFL Inverter (Type 11) with a DC-link voltage of 2.5 pu, filter inductance wLf = 0.05 pu, filter resistance R = 0.001 pu, PLL bandwidth f_pll = 10 Hz, and current loop bandwidth f_i_dq = 250 Hz.

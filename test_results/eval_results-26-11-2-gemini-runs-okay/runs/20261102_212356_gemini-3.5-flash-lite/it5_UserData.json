@@ -1,0 +1,224 @@
+{
+  "Basic": {
+    "Fs": 25000,
+    "Fbase": 60.0,
+    "Sbase": 1.0,
+    "Vbase": 1.0
+  },
+  "Advance": {
+    "DiscretizationMethod": 2,
+    "LinearizationTimes": 1,
+    "DiscretizationDampingFlag": 1,
+    "DirectFeedthrough": 0,
+    "PowerFlowAlgorithm": 1,
+    "EnableCreateSimulinkModel": 0,
+    "EnablePlotPole": 0,
+    "EnablePlotAdmittance": 0,
+    "EnablePrintOutput": 1
+  },
+  "Bus": [
+    {
+      "BusNo": 1,
+      "BusType": 1,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 2,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 3,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 4,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 5,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    }
+  ],
+  "NetworkLine": [
+    {
+      "FromBus": 1,
+      "ToBus": 2,
+      "R": 0.02,
+      "wL": 0.06,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 1,
+      "ToBus": 3,
+      "R": 0.08,
+      "wL": 0.24,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 2,
+      "ToBus": 3,
+      "R": 0.06,
+      "wL": 0.18,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 2,
+      "ToBus": 4,
+      "R": 0.06,
+      "wL": 0.18,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 2,
+      "ToBus": 5,
+      "R": 0.04,
+      "wL": 0.12,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 3,
+      "ToBus": 4,
+      "R": 0.01,
+      "wL": 0.03,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 4,
+      "ToBus": 5,
+      "R": 0.08,
+      "wL": 0.24,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    }
+  ],
+  "NetworkLineIEEE": [],
+  "Apparatus": [
+    {
+      "BusNo": 1,
+      "Type": 90,
+      "Para": []
+    },
+    {
+      "BusNo": 2,
+      "Type": 10,
+      "Para": {
+        "V_dc": 2.5,
+        "C_dc": 1.25,
+        "f_v_dc": 5.0,
+        "wLf": 0.03,
+        "R": 0.01,
+        "f_pll": 5.0,
+        "f_tau_pll": 300.0,
+        "f_i_dq": 600.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 3,
+      "Type": 10,
+      "Para": {
+        "V_dc": 2.5,
+        "C_dc": 1.25,
+        "f_v_dc": 5.0,
+        "wLf": 0.03,
+        "R": 0.01,
+        "f_pll": 5.0,
+        "f_tau_pll": 300.0,
+        "f_i_dq": 600.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 4,
+      "Type": 10,
+      "Para": {
+        "V_dc": 2.5,
+        "C_dc": 1.25,
+        "f_v_dc": 5.0,
+        "wLf": 0.03,
+        "R": 0.01,
+        "f_pll": 5.0,
+        "f_tau_pll": 300.0,
+        "f_i_dq": 600.0,
+        "w0": 376.99111843077515
+      }
+    },
+    {
+      "BusNo": 5,
+      "Type": 10,
+      "Para": {
+        "V_dc": 2.5,
+        "C_dc": 1.25,
+        "f_v_dc": 5.0,
+        "wLf": 0.03,
+        "R": 0.01,
+        "f_pll": 5.0,
+        "f_tau_pll": 300.0,
+        "f_i_dq": 600.0,
+        "w0": 376.99111843077515
+      }
+    }
+  ]
+}

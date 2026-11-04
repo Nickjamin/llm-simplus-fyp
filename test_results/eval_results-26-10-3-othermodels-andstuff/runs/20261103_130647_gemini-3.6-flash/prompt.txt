@@ -1,0 +1,14 @@
+Configure a 4-bus hybrid AC power system in SimplusGT operating at 50 Hz, integrating conventional generation and modern converter-interfaced resources.
+
+Topology Overview:
+- Simulation settings: Base frequency Fbase = 50.0 Hz, sampling frequency Fs = 25000 Hz, Gauss-Seidel power flow (Algorithm 1).
+- Network Layout:
+  * Buses 1, 2, and 3 form a transmission loop/triangle.
+  * Line 1-2, Line 1-3, and Line 2-3 each have series resistance R = 0.015 pu and inductive reactance wL = 0.10 pu (wC = 0, G = 0).
+  * Bus 4 connects radially to Bus 3 via Line 3-4 with R = 0.01 pu and wL = 0.05 pu.
+
+Generation & Apparatus:
+- Bus 1: Slack bus (BusType = 1) held at 1.0 pu voltage, hosting a conventional 2nd-order Synchronous Generator (Type 0, default parameters).
+- Bus 2: PV generator bus (BusType = 2) held at 1.0 pu voltage, generating 0.5 pu active power, hosting a conventional Synchronous Generator (Type 0, default parameters).
+- Bus 3: PQ bus (BusType = 3) hosting a Grid-Forming Battery Energy Storage System (BESS, Type 30) operating under default control parameters, floating at 1.0 pu voltage.
+- Bus 4: PQ bus (BusType = 3) hosting a Grid-Following Wind Turbine generator (Type 51) injecting 0.5 pu active power at unity power factor with default parameters.

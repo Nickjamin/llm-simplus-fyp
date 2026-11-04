@@ -1,0 +1,58 @@
+{
+  "Basic": {
+    "Fbase": 60.0,
+    "Fs": 25000,
+    "Sbase": 1.0,
+    "Vbase": 1.0
+  },
+  "Advance": {
+    "DiscretizationMethod": 2,
+    "LinearizationTimes": 1,
+    "DiscretizationDampingFlag": 1,
+    "DirectFeedthrough": 0,
+    "PowerFlowAlgorithm": 1,
+    "EnableCreateSimulinkModel": 0,
+    "EnablePlotPole": 1,
+    "EnablePlotAdmittance": 1,
+    "EnablePrintOutput": 1
+  },
+  "Bus": [
+    {
+      "BusNo": 1,
+      "BusType": 1,
+      "Voltage": 1.06,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 2,
+      "BusType": 2,
+      "Voltage": 1.045,
+      "Theta": 0.0,
+      "PGi": 0.4,
+      "QGi": 0.0,
+      "PLi": 0.217,
+      "QLi": 0.127,
+      "Qmin": -40.0,
+      "Qmax": 50.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 3,
+      "BusType": 2,
+      "Voltage": 1.01,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.942,
+      "QLi": 0.19,
+      "Qmin": 0.0,
+      "Qmax":

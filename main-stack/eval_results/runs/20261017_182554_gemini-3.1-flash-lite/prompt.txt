@@ -1,1 +1,0 @@
-Generate a 3-bus AC system connected sequentially. Bus 1 has a standard synchronous generator. Bus 2 has a PV-GFM inverter, but override its nominal DC link capacitor (C_dc) to 1.5 and its filter resistance (Rf) to 0.02. Bus 3 is just a shunt load. Make the line between Bus 1 and 2 very long by setting its series R to 0.05 and wL to 0.8.

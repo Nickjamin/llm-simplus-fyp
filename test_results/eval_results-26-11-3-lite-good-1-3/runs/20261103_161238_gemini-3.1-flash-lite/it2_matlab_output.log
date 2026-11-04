@@ -1,0 +1,22 @@
+
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+
+Error using SimplusGT.PowerFlow.Load2SelfBranch
+Error: Passive load at bus 2 can not generate active power, i.e., PLi can not be less than 0.
+
+Error in SimplusGT.Toolbox.Main (line 124)
+[ListBusNew,ListLineNew,PowerFlowNew] = SimplusGT.PowerFlow.Load2SelfBranch(ListBus,ListLine,PowerFlow);
+
+Error in UserMain (line 54)
+SimplusGT.Toolbox.Main();  
+

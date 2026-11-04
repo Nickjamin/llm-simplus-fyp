@@ -1,0 +1,26 @@
+{
+    "IEEE_14Bus_Inverter_Retrofit": {
+        "high_level": "Configure the standard IEEE 14-bus test system for SimplusGT at 60 Hz. Keep Bus 1 as the slack bus, but replace the synchronous condensers at Buses 3, 6, and 8 with Grid-Forming Inverters (Type 20) using default control parameters. Leave all other loads, transmission lines, and the Bus 9 shunt capacitor at their standard IEEE values.",
+        "notes": "Category: The Benchmark Modification. Tests if the LLM can recall standard IEEE 14-bus parameters while successfully applying a specific topological override (swapping Type 0 for Type 20)."
+    },
+    "WSCC_9Bus_Storage_Integration": {
+        "high_level": "Build the WSCC 3-machine 9-bus benchmark at 60Hz. Replace the generator at Bus 2 with a Battery Energy Storage System (Type 30) using standard defaults. Maintain all standard WSCC line impedances and load values for the rest of the network.",
+        "notes": "Category: The Benchmark Modification. Tests partial retrieval of a widely known benchmark (WSCC 9-bus) with a single apparatus swap."
+    },
+    "Simple_Radial_Microgrid": {
+        "high_level": "I need a 3-bus 50Hz microgrid to test inverter interactions. Bus 1 is an infinite bus. Connect it radially to Bus 2 and Bus 3 using short, low-impedance lines. Put a default Grid-Following PV inverter (Type 40) on Bus 2 injecting 0.5 pu active power, and a default Grid-Forming wind turbine (Type 50) on Bus 3. Assume base values of 1.0 pu for voltage and 100 MVA base.",
+        "notes": "Category: The Lazy Concept. Tests the LLM's ability to extrapolate 'short, low-impedance lines' into valid float values and assign correct types (40 and 50) without explicit parameter overrides."
+    },
+    "SMIB_Shunt_Compensation": {
+        "high_level": "Create a classic single machine infinite bus (SMIB) system at 60Hz. The infinite bus is Bus 1. It connects to Bus 2 over a lossless line with wL = 0.5 pu. Bus 2 has a 2nd-order synchronous generator supplying 0.8 pu active power, plus a shunt capacitor with wC = 0.1 pu connected to ground. Just use the default parameters for the generator.",
+        "notes": "Category: The Lazy Concept. Forces the LLM to remember the crucial self-branch rule for shunt capacitors (FromBus == ToBus == 2, R='NaN', wL='NaN')."
+    },
+    "Textbook_Copy_Paste_5Bus": {
+        "high_level": "Set up a 60Hz 5-bus system. Bus 1 is the slack bus at 1.0 pu. Buses 2-5 are floating PQ buses. Here is the line data from the textbook I'm using, just use default base values:\nFrom    To      R(pu)   X(pu)   B(pu)\n1       2       0.02    0.06    0.03\n1       3       0.08    0.24    0.025\n2       3       0.06    0.18    0.02\n2       4       0.06    0.18    0.02\n2       5       0.04    0.12    0.015\n3       4       0.01    0.03    0.01\n4       5       0.08    0.24    0.025",
+        "notes": "Category: The Unstructured Data Dump. Tests the LLM's spatial reasoning and table-parsing abilities, mapping X to wL and B to wC."
+    },
+    "Stream_Of_Consciousness_4Bus": {
+        "high_level": "Need a 4 bus AC system at 50Hz. Bus 1 slack (V=1.0), bus 2 PV gen outputting 1.2 pu (Type 0 machine). Loads are at bus 3 (PL=0.8, QL=0.2) and bus 4 (PL=0.4). Lines are: 1 to 2 has R=0.01, X=0.05. 2 to 3 has R=0.02, X=0.1. 3 to 4 is R=0.01, X=0.08. 1 to 4 is R=0.015, X=0.06. No line charging anywhere.",
+        "notes": "Category: The Unstructured Data Dump. Tests ability to parse conversational, shorthand text and fill in missing fields (like QL=0 on bus 4, or wC=0 on all lines)."
+    }
+}

@@ -1,0 +1,34 @@
+Configure the 14-generator, 5-area, 59-bus simplified South East Australian benchmark power system (NEM) for SimplusGT at 50 Hz.
+
+System Settings:
+- Base Grid Frequency: 50.0 Hz, Sampling Frequency: 25000 Hz, Newton-Raphson power flow (Algorithm 2), DiscretizationMethod: 2 (Backward Euler), EnableCreateSimulinkModel: 0.
+- 59 buses total with 138 transmission branches and transformer circuits.
+
+Generation Assets (14 Synchronous Machines, Type 0):
+- Machine parameters follow D = 0.25*J and stator R = 0.0001 pu:
+  * Bus 1 (Slack Bus): Voltage = 1.0 pu, PGi = 3.008 pu, QGi = 3.115 pu. Machine: J = 3.6, D = 0.9, wL = 0.14 pu, R = 0.0001 pu.
+  * Bus 3 (PV): Voltage = 1.0 pu, PGi = 36.0 pu. Machine: J = 3.2, D = 0.8, wL = 0.20 pu, R = 0.0001 pu.
+  * Bus 4 (PV): Voltage = 1.0 pu, PGi = 25.0 pu. Machine: J = 2.8, D = 0.7, wL = 0.17 pu, R = 0.0001 pu.
+  * Bus 5 (PV): Voltage = 1.0 pu, PGi = 15.0 pu. Machine: J = 2.6, D = 0.65, wL = 0.20 pu, R = 0.0001 pu.
+  * Bus 6 (PV): Voltage = 1.0 pu, PGi = 29.502 pu. Machine: J = 3.2, D = 0.8, wL = 0.20 pu, R = 0.0001 pu.
+  * Bus 20 (PV): Voltage = 1.0 pu, PGi = 42.0 pu. Machine: J = 2.8, D = 0.7, wL = 0.20 pu, R = 0.0001 pu.
+  * Bus 21 (PV): Voltage = 1.0 pu, PGi = 9.399 pu. Machine: J = 3.5, D = 0.875, wL = 0.15 pu, R = 0.0001 pu.
+  * Bus 35 (PV): Voltage = 1.0 pu, PGi = 14.0 pu. Machine: J = 2.6, D = 0.65, wL = 0.20 pu, R = 0.0001 pu.
+  * Bus 36 (PV): Voltage = 1.0 pu, PGi = 8.37 pu. Machine: J = 3.0, D = 0.75, wL = 0.20 pu, R = 0.0001 pu.
+  * Bus 37 (PV): Voltage = 1.0 pu, PGi = 14.0 pu. Machine: J = 2.6, D = 0.65, wL = 0.20 pu, R = 0.0001 pu.
+  * Bus 38 (PV): Voltage = 1.0 pu, PGi = 15.498 pu. Machine: J = 4.0, D = 1.0, wL = 0.18 pu, R = 0.0001 pu.
+  * Bus 51 (PV): Voltage = 1.0 pu, PGi = 6.0 pu. Machine: J = 3.5, D = 0.875, wL = 0.15 pu, R = 0.0001 pu.
+  * Bus 52 (PV): Voltage = 1.0 pu, PGi = 8.0 pu. Machine: J = 4.0, D = 1.0, wL = 0.20 pu, R = 0.0001 pu.
+  * Bus 53 (PV): Voltage = 1.0 pu, PGi = 4.36 pu. Machine: J = 7.5, D = 1.875, wL = 0.15 pu, R = 0.0001 pu.
+
+SVC Reactive Voltage Support Buses:
+- Buses 7, 32, 46, 57, and 59 operate as PV regulation buses with PGi = 0 (Apparatus Type 100):
+  * Bus 7: V = 1.055 pu, PLi = 3.9 pu, QLi = 0.39 pu
+  * Bus 32: V = 1.015 pu, PLi = 24.05 pu, QLi = 2.4 pu
+  * Bus 46: V = 1.000 pu, PLi = 12.55 pu, QLi = 1.26 pu
+  * Bus 57: V = 1.015 pu, PLi = 10.0 pu, QLi = 2.0 pu
+  * Bus 59: V = 1.030 pu, PLi = 2.0 pu, QLi = 0.4 pu
+
+Transmission Network & Heavy Corridors:
+- Buses 2, 8-19, 22-31, 33-34, 39-45, 47-50, 54-56, 58 are PQ load and intermediate transit buses (Apparatus Type 100).
+- The network features multiple parallel circuit paths across regions (such as 4 parallel lines between Buses 2 and 19, 3 parallel lines between Buses 10 and 13, and 6 parallel lines between Buses 57 and 59), alongside 20 transformer branches with off-nominal turns ratios.

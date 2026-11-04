@@ -1,0 +1,1 @@
+I need a 3-bus 50Hz microgrid to test inverter interactions. Bus 1 is an infinite bus. Connect it radially to Bus 2 and Bus 3 using short, low-impedance lines. Put a default Grid-Following PV inverter (Type 40) on Bus 2 injecting 0.5 pu active power, and a default Grid-Forming wind turbine (Type 50) on Bus 3. Assume base values of 1.0 pu for voltage and 100 MVA base.

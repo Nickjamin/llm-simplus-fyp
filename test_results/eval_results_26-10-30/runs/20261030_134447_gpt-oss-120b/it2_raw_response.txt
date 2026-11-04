@@ -1,0 +1,39 @@
+{
+  "Basic": {
+    "Fs": 30000,
+    "Fbase": 60.0,
+    "Sbase": 1.0,
+    "Vbase": 1.0
+  },
+  "Advance": {
+    "DiscretizationMethod": 2,
+    "LinearizationTimes": 1,
+    "DiscretizationDampingFlag": 1,
+    "DirectFeedthrough": 0,
+    "PowerFlowAlgorithm": 2,
+    "EnableCreateSimulinkModel": 0,
+    "EnablePlotPole": 1,
+    "EnablePlotAdmittance": 1,
+    "EnablePrintOutput": 1
+  },
+  "Bus": [
+    { "BusNo": 1, "BusType": 1, "Voltage": 1.06, "Theta": 0.0, "PGi": 2.602, "QGi": -0.161, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 2, "BusType": 2, "Voltage": 1.045, "Theta": 0.0, "PGi": 0.40, "QGi": 0.50, "PLi": 0.217, "QLi": 0.127, "Qmin": -0.4, "Qmax": 0.5, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 3, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 4, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 5, "BusType": 2, "Voltage": 1.01, "Theta": 0.0, "PGi": 0.0, "QGi": 0.37, "PLi": 0.942, "QLi": 0.19, "Qmin": -0.4, "Qmax": 0.4, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 6, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 7, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 8, "BusType": 2, "Voltage": 1.01, "Theta": 0.0, "PGi": 0.0, "QGi": 0.373, "PLi": 0.30, "QLi": 0.30, "Qmin": -0.1, "Qmax": 0.4, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 9, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 10, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 11, "BusType": 2, "Voltage": 1.082, "Theta": 0.0, "PGi": 0.0, "QGi": 0.162, "PLi": 0.0, "QLi": 0.0, "Qmin": -0.06, "Qmax": 0.24, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 12, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 13, "BusType": 2, "Voltage": 1.071, "Theta": 0.0, "PGi": 0.0, "QGi": 0.106, "PLi": 0.0, "QLi": 0.0, "Qmin": -0.06, "Qmax": 0.24, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 14, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 15, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 16, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 17, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 18, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 19, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi": 0.0, "Qmin": -999.0, "Qmax": 999.0, "AreaNo": 1, "AcDc": 1 },
+    { "BusNo": 20, "BusType": 3, "Voltage": 1.0, "Theta": 0.0, "PGi": 0.0, "QGi": 0.0, "PLi": 0.0, "QLi":

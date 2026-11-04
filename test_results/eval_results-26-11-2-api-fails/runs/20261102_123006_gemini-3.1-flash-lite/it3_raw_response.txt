@@ -1,0 +1,64 @@
+{
+  "Basic": {
+    "Fs": 25000,
+    "Fbase": 60.0,
+    "Sbase": 100000000.0,
+    "Vbase": 138000.0
+  },
+  "Advance": {
+    "DiscretizationMethod": 2,
+    "LinearizationTimes": 1,
+    "DiscretizationDampingFlag": 1,
+    "DirectFeedthrough": 0,
+    "PowerFlowAlgorithm": 2,
+    "EnableCreateSimulinkModel": 0,
+    "EnablePlotPole": 1,
+    "EnablePlotAdmittance": 1,
+    "EnablePrintOutput": 1
+  },
+  "Bus": [
+    {"BusNo": 1, "BusType": 1, "Voltage": 1.06, "Theta": 0.0},
+    {"BusNo": 2, "BusType": 2, "Voltage": 1.045, "PGi": 0.4},
+    {"BusNo": 3, "BusType": 2, "Voltage": 1.01, "PGi": 0.0},
+    {"BusNo": 4, "BusType": 3, "PLi": 0.478, "QLi": -0.039},
+    {"BusNo": 5, "BusType": 3, "PLi": 0.076, "QLi": 0.016},
+    {"BusNo": 6, "BusType": 2, "Voltage": 1.07, "PGi": 0.0},
+    {"BusNo": 7, "BusType": 3, "PLi": 0.0, "QLi": 0.0},
+    {"BusNo": 8, "BusType": 2, "Voltage": 1.09, "PGi": 0.0},
+    {"BusNo": 9, "BusType": 3, "PLi": 0.295, "QLi": 0.166},
+    {"BusNo": 10, "BusType": 3, "PLi": 0.09, "QLi": 0.058},
+    {"BusNo": 11, "BusType": 3, "PLi": 0.035, "QLi": 0.018},
+    {"BusNo": 12, "BusType": 3, "PLi": 0.061, "QLi": 0.016},
+    {"BusNo": 13, "BusType": 3, "PLi": 0.135, "QLi": 0.058},
+    {"BusNo": 14, "BusType": 3, "PLi": 0.149, "QLi": 0.05}
+  ],
+  "NetworkLine": [
+    {"FromBus": 1, "ToBus": 2, "R": 0.01938, "wL": 0.05917, "wC": 0.0528},
+    {"FromBus": 1, "ToBus": 5, "R": 0.05403, "wL": 0.22304, "wC": 0.0492},
+    {"FromBus": 2, "ToBus": 3, "R": 0.04699, "wL": 0.19797, "wC": 0.0438},
+    {"FromBus": 2, "ToBus": 4, "R": 0.05811, "wL": 0.17632, "wC": 0.0374},
+    {"FromBus": 2, "ToBus": 5, "R": 0.05695, "wL": 0.17388, "wC": 0.034},
+    {"FromBus": 3, "ToBus": 4, "R": 0.06701, "wL": 0.17103, "wC": 0.0346},
+    {"FromBus": 4, "ToBus": 5, "R": 0.01335, "wL": 0.04211, "wC": 0.0128},
+    {"FromBus": 4, "ToBus": 7, "R": 0.0, "wL": 0.20912},
+    {"FromBus": 4, "ToBus": 9, "R": 0.0, "wL": 0.55618},
+    {"FromBus": 5, "ToBus": 6, "R": 0.0, "wL": 0.25202},
+    {"FromBus": 6, "ToBus": 11, "R": 0.09498, "wL": 0.1989},
+    {"FromBus": 6, "ToBus": 12, "R": 0.12291, "wL": 0.25581},
+    {"FromBus": 6, "ToBus": 13, "R": 0.06615, "wL": 0.13027},
+    {"FromBus": 7, "ToBus": 8, "R": 0.0, "wL": 0.17615},
+    {"FromBus": 7, "ToBus": 9, "R": 0.0, "wL": 0.11001},
+    {"FromBus": 9, "ToBus": 10, "R": 0.03181, "wL": 0.0845},
+    {"FromBus": 9, "ToBus": 14, "R": 0.12711, "wL": 0.27038},
+    {"FromBus": 10, "ToBus": 11, "R": 0.08205, "wL": 0.19207},
+    {"FromBus": 12, "ToBus": 13, "R": 0.22092, "wL": 0.19988},
+    {"FromBus": 13, "ToBus": 14, "R": 0.17093, "wL": 0.34802},
+    {"FromBus": 9, "ToBus": 9, "R": "NaN", "wL": "NaN", "wC": 0.19}
+  ],
+  "Apparatus": [
+    {"BusNo": 1, "Type": 90},
+    {"BusNo": 3, "Type": 20},
+    {"BusNo": 6, "Type": 20},
+    {"BusNo": 8, "Type": 20}
+  ]
+}

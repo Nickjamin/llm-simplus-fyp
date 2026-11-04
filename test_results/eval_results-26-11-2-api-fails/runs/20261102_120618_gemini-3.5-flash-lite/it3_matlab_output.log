@@ -1,0 +1,25 @@
+
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+
+Error using SimplusGT.Toolbox.FindBranch
+Error: The branch2-2 appears multiple times.
+
+Error in SimplusGT.PowerFlow.Load2SelfBranch (line 76)
+        n = SimplusGT.Toolbox.FindBranch(UpdateListLine,i,i);
+
+Error in SimplusGT.Toolbox.Main (line 124)
+[ListBusNew,ListLineNew,PowerFlowNew] = SimplusGT.PowerFlow.Load2SelfBranch(ListBus,ListLine,PowerFlow);
+
+Error in UserMain (line 54)
+SimplusGT.Toolbox.Main();  
+

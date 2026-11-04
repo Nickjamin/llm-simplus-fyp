@@ -1,0 +1,115 @@
+
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+Print power flow result:
+The format below is "| bus | P | Q | V | angle | omega |". P and Q are in load convention.
+
+ListPowerFlow =
+
+    1.0000    0.4975   -0.0833    1.0000         0  314.1593
+    2.0000   -0.5000    0.0663    1.0000    0.0340  314.1593
+    3.0000    0.0000   -0.0000    0.9999    0.0170  314.1593
+    4.0000   -0.0000    0.0000    0.9999    0.0170  314.1593
+
+Get the descriptor state space model of network lines...
+Get the descriptor state space model of bus apparatuses...
+Get the appended descriptor state space model of all apparatuses...
+Get the descriptor state space model of whole system...
+Check if the whole system is proper:
+Proper!
+Calculate the minimum realization of the system model for later use...
+
+Print state space model: 
+Whole system port model (descriptor state space): GsysDss
+Print ports of GsysDss:
+
+  Model state in order:
+    Apparatus 1:
+        (1) epsilon1, (2) i_d1, (3) i_q1, (4) w1, (5) theta1
+    Apparatus 2:
+        (6) epsilon2, (7) i_d2, (8) i_q2, (9) w2, (10) theta2
+    Apparatus 3:
+        (11) epsilon3, (12) i_ld3, (13) i_lq3, (14) i_ld_i3, (15) i_lq_i3, (16) v_od3, 
+        (17) v_oq3, (18) v_od_i3, (19) v_oq_i3, (20) i_od3, (21) i_oq3, (22) v_d_ref3, 
+        (23) w3, (24) theta3, (25) i_bat3, (26) v_dc3, (27) i_bat_ref3, (28) duty_cycle3
+    Apparatus 4:
+        (29) epsilon4, (30) i_d4, (31) i_q4, (32) i_d_i4, (33) i_q_i4, (34) w_pll_i4, 
+        (35) w4, (36) theta4, (37) v_dc4, (38) v_dc_i4, (39) i_sd4, (40) i_sq4, 
+        (41) i_sd_i4, (42) i_sq_i4, (43) w_m4, (44) w_m_i4, (45) theta_m4
+    Network line:
+        (46) id1-2, (47) iq1-2, (48) id1-3, (49) iq1-3, (50) id1-2, (51) iq1-2, 
+        (52) id1-3, (53) iq1-3, (54) id1-2, (55) iq1-2, (56) id1-2, (57) iq1-2, 
+        (58) id2-3, (59) iq2-3, (60) id2-3, (61) iq2-3, (62) id1-3, (63) iq1-3, 
+        (64) id2-3, (65) iq2-3, (66) id1-3, (67) iq1-3, (68) id2-3, (69) iq2-3, 
+        (70) id3-4, (71) iq3-4, (72) id3-4, (73) iq3-4, (74) id3-4, (75) iq3-4, 
+        (76) id3-4, (77) iq3-4, (78) xi_1, (79) xi_2, (80) xi_3, (81) xi_4, 
+        (82) xi_5, (83) xi_6, (84) xi_7, (85) xi_8
+
+  Model input in order:
+    Bus 1:
+        (1) v_d1, (2) v_q1, (3) T_m1, (4) v_ex1
+    Bus 2:
+        (5) v_d2, (6) v_q2, (7) T_m2, (8) v_ex2
+    Bus 3:
+        (9) v_d3, (10) v_q3, (11) P03
+    Bus 4:
+        (12) v_d4, (13) v_q4, (14) ang_r4
+
+  Model output in order:
+    Bus 1:
+        (1) i_d1, (2) i_q1, (3) w1, (4) i_ex1, (5) theta1
+    Bus 2:
+        (6) i_d2, (7) i_q2, (8) w2, (9) i_ex2, (10) theta2
+    Bus 3:
+        (11) i_d3, (12) i_q3, (13) w3, (14) theta3, (15) v_dc3, (16) i_bat3, 
+        (17) p3
+    Bus 4:
+        (18) i_d4, (19) i_q4, (20) w4, (21) theta4, (22) v_dc4, (23) i_sd4, 
+        (24) i_sq4, (25) v_sd4, (26) v_sq4, (27) T_e4, (28) T_m4, (29) n4, 
+        (30) theta_e4
+
+Other models saved in workspace: 
+Whole system port model (state space): GsysSs
+Whole system admittance model (descriptor state space): YsysDss
+Whole system admittance model (state space): YsysSs
+
+Calculate pole/zero...
+Check if the system is stable:
+Warning: Unstable!
+
+==================================
+Plot Fundamentals 
+==================================
+
+Plot Fundamentals:
+Warning: The plot of pole map is disabled.
+Warning: The plot of admittance spectrum is disabled.
+
+==================================
+Grid Strength Analysis
+==================================
+Plot grid strength.
+
+==================================
+Synchronization Analysis
+==================================
+Warning: The synchronisation analysis is disabled.
+
+=================================
+Simulink Model
+=================================
+Warning: The auto creation of simulink model is disabled.
+
+==================================
+End: Run Successfully.
+==================================
+

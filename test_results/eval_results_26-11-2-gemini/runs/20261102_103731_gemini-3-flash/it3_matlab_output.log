@@ -1,0 +1,116 @@
+
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+Print power flow result:
+The format below is "| bus | P | Q | V | angle | omega |". P and Q are in load convention.
+
+ListPowerFlow =
+
+    1.0000   -0.0003    0.1183    1.0000         0  376.9911
+    2.0000   -0.0000    0.0000    1.0053   -0.0018  376.9911
+    3.0000   -0.0000    0.0000    1.0073   -0.0024  376.9911
+    4.0000   -0.0000    0.0000    1.0077   -0.0026  376.9911
+    5.0000    0.0000   -0.0000    1.0077   -0.0026  376.9911
+
+Get the descriptor state space model of network lines...
+Get the descriptor state space model of bus apparatuses...
+Get the appended descriptor state space model of all apparatuses...
+Get the descriptor state space model of whole system...
+Check if the whole system is proper:
+Proper!
+Calculate the minimum realization of the system model for later use...
+
+Print state space model: 
+Whole system port model (descriptor state space): GsysDss
+Print ports of GsysDss:
+
+  Model state in order:
+    Apparatus 1:
+        (1) xi_1, (2) xi_2
+    Network line:
+        (3) id1-2, (4) iq1-2, (5) id1-3, (6) iq1-3, (7) id1-2, (8) iq1-2, 
+        (9) id1-3, (10) iq1-3, (11) id1-2, (12) iq1-2, (13) id1-2, (14) iq1-2, 
+        (15) vd2-2, (16) vq2-2, (17) xi2-2, (18) xi2-2, (19) id2-3, (20) iq2-3, 
+        (21) id2-4, (22) iq2-4, (23) id2-5, (24) iq2-5, (25) id2-3, (26) iq2-3, 
+        (27) id2-4, (28) iq2-4, (29) id2-5, (30) iq2-5, (31) id1-3, (32) iq1-3, 
+        (33) id2-3, (34) iq2-3, (35) id1-3, (36) iq1-3, (37) id2-3, (38) iq2-3, 
+        (39) vd3-3, (40) vq3-3, (41) xi3-3, (42) xi3-3, (43) id3-4, (44) iq3-4, 
+        (45) id3-4, (46) iq3-4, (47) id2-4, (48) iq2-4, (49) id3-4, (50) iq3-4, 
+        (51) id2-4, (52) iq2-4, (53) id3-4, (54) iq3-4, (55) vd4-4, (56) vq4-4, 
+        (57) xi4-4, (58) xi4-4, (59) id4-5, (60) iq4-5, (61) id4-5, (62) iq4-5, 
+        (63) id2-5, (64) iq2-5, (65) id4-5, (66) iq4-5, (67) id2-5, (68) iq2-5, 
+        (69) id4-5, (70) iq4-5, (71) vd5-5, (72) vq5-5, (73) xi5-5, (74) xi5-5, 
+        (75) xi_1, (76) xi_2, (77) xi_3, (78) xi_4, (79) xi_5, (80) xi_6, 
+        (81) xi_7, (82) xi_8, (83) xi_9, (84) xi_10
+
+  Model input in order:
+    Bus 1:
+        (1) v_d1, (2) v_q1
+    Bus 2:
+        (3) v_d2, (4) v_q2
+    Bus 3:
+        (5) v_d3, (6) v_q3
+    Bus 4:
+        (7) v_d4, (8) v_q4
+    Bus 5:
+        (9) v_d5, (10) v_q5
+
+  Model output in order:
+    Bus 1:
+        (1) i_d1, (2) i_q1, (3) w1
+    Bus 2:
+        (4) i_d2, (5) i_q2
+    Bus 3:
+        (6) i_d3, (7) i_q3
+    Bus 4:
+        (8) i_d4, (9) i_q4
+    Bus 5:
+        (10) i_d5, (11) i_q5
+
+Other models saved in workspace: 
+Whole system port model (state space): GsysSs
+Whole system admittance model (descriptor state space): YsysDss
+Whole system admittance model (state space): YsysSs
+
+Calculate pole/zero...
+Check if the system is stable:
+Stable!
+
+==================================
+Plot Fundamentals 
+==================================
+
+Plot Fundamentals:
+Plot pole map...
+Plot admittance spectrum...
+MTIT> no axis
+MTIT> no axis
+
+==================================
+Grid Strength Analysis
+==================================
+Plot grid strength.
+
+==================================
+Synchronization Analysis
+==================================
+Warning: The synchronisation analysis is disabled.
+
+=================================
+Simulink Model
+=================================
+Warning: The auto creation of simulink model is disabled.
+
+==================================
+End: Run Successfully.
+==================================
+

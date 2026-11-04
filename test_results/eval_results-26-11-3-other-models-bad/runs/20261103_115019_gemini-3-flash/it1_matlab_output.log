@@ -1,0 +1,105 @@
+
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+Print power flow result:
+The format below is "| bus | P | Q | V | angle | omega |". P and Q are in load convention.
+
+ListPowerFlow =
+
+    1.0000    0.4997   -0.0512    1.0000         0  314.1593
+    2.0000   -0.5000    0.0487    1.0000    0.0050  314.1593
+    3.0000    0.0000   -0.0000    1.0000    0.0050  314.1593
+
+Get the descriptor state space model of network lines...
+Get the descriptor state space model of bus apparatuses...
+Get the appended descriptor state space model of all apparatuses...
+Get the descriptor state space model of whole system...
+Check if the whole system is proper:
+Proper!
+Calculate the minimum realization of the system model for later use...
+
+Print state space model: 
+Whole system port model (descriptor state space): GsysDss
+Print ports of GsysDss:
+
+  Model state in order:
+    Apparatus 1:
+        (1) xi_1, (2) xi_2
+    Apparatus 2:
+        (3) epsilon2, (4) v_pv_i2, (5) i_l_i2, (6) i_l2, (7) v_pv2, (8) v_dc_i2, 
+        (9) pll_i2, (10) i_d_i2, (11) i_q_i2, (12) i_d2, (13) i_q2, (14) v_d2, 
+        (15) v_q2, (16) i_gd2, (17) i_gq2, (18) v_dc2, (19) theta2
+    Apparatus 3:
+        (20) epsilon3, (21) i_ld3, (22) i_lq3, (23) i_ld_i3, (24) i_lq_i3, (25) v_od3, 
+        (26) v_oq3, (27) v_od_i3, (28) v_oq_i3, (29) i_od3, (30) i_oq3, (31) v_d_ref3, 
+        (32) w3, (33) theta3, (34) v_dc3, (35) v_dc_i3, (36) i_sd3, (37) i_sq3, 
+        (38) i_sd_i3, (39) i_sq_i3, (40) w_m3, (41) w_m_i3, (42) theta_m3
+    Network line:
+        (43) id1-2, (44) iq1-2, (45) id1-2, (46) iq1-2, (47) id1-2, (48) iq1-2, 
+        (49) id1-2, (50) iq1-2, (51) id2-3, (52) iq2-3, (53) id2-3, (54) iq2-3, 
+        (55) id2-3, (56) iq2-3, (57) id2-3, (58) iq2-3, (59) xi_1, (60) xi_2, 
+        (61) xi_3, (62) xi_4, (63) xi_5, (64) xi_6
+
+  Model input in order:
+    Bus 1:
+        (1) v_d1, (2) v_q1
+    Bus 2:
+        (3) v_d2, (4) v_q2, (5) P02
+    Bus 3:
+        (6) v_d3, (7) v_q3, (8) P03
+
+  Model output in order:
+    Bus 1:
+        (1) i_d1, (2) i_q1, (3) w1
+    Bus 2:
+        (4) i_d2, (5) i_q2, (6) w2, (7) theta2
+    Bus 3:
+        (8) i_d3, (9) i_q3, (10) w3, (11) theta3, (12) v_dc3, (13) i_sd3, 
+        (14) i_sq3, (15) v_sd3, (16) v_sq3, (17) T_e3, (18) T_m3, (19) n3, 
+        (20) theta_e3, (21) beta3
+
+Other models saved in workspace: 
+Whole system port model (state space): GsysSs
+Whole system admittance model (descriptor state space): YsysDss
+Whole system admittance model (state space): YsysSs
+
+Calculate pole/zero...
+Check if the system is stable:
+Warning: Unstable!
+
+==================================
+Plot Fundamentals 
+==================================
+
+Plot Fundamentals:
+Warning: The plot of pole map is disabled.
+Warning: The plot of admittance spectrum is disabled.
+
+==================================
+Grid Strength Analysis
+==================================
+Plot grid strength.
+
+==================================
+Synchronization Analysis
+==================================
+Warning: The synchronisation analysis is disabled.
+
+=================================
+Simulink Model
+=================================
+Warning: The auto creation of simulink model is disabled.
+
+==================================
+End: Run Successfully.
+==================================
+

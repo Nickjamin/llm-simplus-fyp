@@ -1,0 +1,64 @@
+{
+  "Basic": {
+    "Fs": 25000,
+    "Fbase": 50.0,
+    "Sbase": 100000000.0,
+    "Vbase": 1.0
+  },
+  "Advance": {
+    "DiscretizationMethod": 2,
+    "LinearizationTimes": 1,
+    "DiscretizationDampingFlag": 1,
+    "DirectFeedthrough": 0,
+    "PowerFlowAlgorithm": 1,
+    "EnableCreateSimulinkModel": 0,
+    "EnablePlotPole": 0,
+    "EnablePlotAdmittance": 0,
+    "EnablePrintOutput": 1
+  },
+  "Bus": [
+    {
+      "BusNo": 1,
+      "BusType": 1,
+      "Voltage": 1.0,
+      "Theta": 0.0
+    },
+    {
+      "BusNo": 2,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.5
+    },
+    {
+      "BusNo": 3,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0
+    }
+  ],
+  "NetworkLine": [
+    {
+      "FromBus": 1,
+      "ToBus": 2,
+      "R": 0.005,
+      "wL": 0.05
+    },
+    {
+      "FromBus": 2,
+      "ToBus": 3,
+      "R": 0.005,
+      "wL": 0.05
+    }
+  ],
+  "Apparatus": [
+    {
+      "BusNo": 2,
+      "Type": 40
+    },
+    {
+      "BusNo": 3,
+      "Type": 50
+    }
+  ]
+}

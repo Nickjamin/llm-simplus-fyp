@@ -1,0 +1,88 @@
+
+[ERROR] MATLAB execution timed out after 60s.
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+Print power flow result:
+The format below is "| bus | P | Q | V | angle | omega |". P and Q are in load convention.
+
+ListPowerFlow =
+
+    1.0000   -0.0000    0.0001    1.0000         0  314.1593
+    2.0000    0.0000   -0.0001    1.0000   -0.0000  314.1593
+
+Get the descriptor state space model of network lines...
+Get the descriptor state space model of bus apparatuses...
+Get the appended descriptor state space model of all apparatuses...
+Get the descriptor state space model of whole system...
+Check if the whole system is proper:
+Proper!
+Calculate the minimum realization of the system model for later use...
+
+Print state space model: 
+Whole system port model (descriptor state space): GsysDss
+Print ports of GsysDss:
+
+  Model state in order:
+    Apparatus 1:
+        (1) xi_1, (2) xi_2
+    Apparatus 2:
+        (3) epsilon2, (4) i_ld2, (5) i_lq2, (6) i_ld_i2, (7) i_lq_i2, (8) v_od2, 
+        (9) v_oq2, (10) v_od_i2, (11) v_oq_i2, (12) i_od2, (13) i_oq2, (14) v_d_ref2, 
+        (15) w2, (16) theta2
+    Network line:
+        (17) id1-2, (18) iq1-2, (19) id1-2, (20) iq1-2, (21) id1-2, (22) iq1-2, 
+        (23) id1-2, (24) iq1-2, (25) xi_1, (26) xi_2, (27) xi_3, (28) xi_4
+
+  Model input in order:
+    Bus 1:
+        (1) v_d1, (2) v_q1
+    Bus 2:
+        (3) v_d2, (4) v_q2, (5) P02
+
+  Model output in order:
+    Bus 1:
+        (1) i_d1, (2) i_q1, (3) w1
+    Bus 2:
+        (4) i_d2, (5) i_q2, (6) w2, (7) theta2
+
+Other models saved in workspace: 
+Whole system port model (state space): GsysSs
+Whole system admittance model (descriptor state space): YsysDss
+Whole system admittance model (state space): YsysSs
+
+Calculate pole/zero...
+Check if the system is stable:
+Stable!
+
+==================================
+Plot Fundamentals 
+==================================
+
+Plot Fundamentals:
+Warning: The plot of pole map is disabled.
+Warning: The plot of admittance spectrum is disabled.
+
+==================================
+Grid Strength Analysis
+==================================
+Plot grid strength.
+
+==================================
+Synchronization Analysis
+==================================
+Warning: The synchronisation analysis is disabled.
+
+=================================
+Simulink Model
+=================================
+Create the simulink model automatically, please wait a second...
+

@@ -1,0 +1,27 @@
+Configure the standard IEEE 30-bus transmission benchmark system for SimplusGT running at 60 Hz.
+
+Grid Settings:
+- Base Grid Frequency: 60.0 Hz, Sampling Frequency: 30000 Hz, Newton-Raphson power flow (Algorithm 2), DiscretizationMethod: 2 (Backward Euler).
+- 30 buses total with 43 branches (lines, transformers, and shunt capacitors).
+
+Generation Assets (6 Synchronous Machines, Type 0):
+- Bus 1 (Slack Bus): Voltage = 1.06 pu, PGi = 2.602 pu, QGi = -0.161 pu. Machine: J = 14.0, D = 40.0, stator wL = 0.075 pu, stator R = 0.0125 pu.
+- Bus 2 (PV Generator): Voltage = 1.045 pu, PGi = 0.40 pu, QGi = 0.50 pu, PLi = 0.217 pu, QLi = 0.127 pu, Q limits = [-0.4, 0.5]. Machine: J = 3.5, D = 10.0, wL = 0.3 pu, R = 0.05 pu.
+- Synchronous Condensers (PV Buses with PGi = 0, machine parameters J = 3.5, D = 10.0, wL = 0.3 pu, R = 0.05 pu):
+  * Bus 5: Voltage = 1.01 pu, QGi = 0.37 pu, local load PLi = 0.942 pu, QLi = 0.19 pu, Q limits = [-0.4, 0.4].
+  * Bus 8: Voltage = 1.01 pu, QGi = 0.373 pu, local load PLi = 0.30 pu, QLi = 0.30 pu, Q limits = [-0.1, 0.4].
+  * Bus 11: Voltage = 1.082 pu, QGi = 0.162 pu, Q limits = [-0.06, 0.24].
+  * Bus 13: Voltage = 1.071 pu, QGi = 0.106 pu, Q limits = [-0.06, 0.24].
+
+Passive Shunt Compensation:
+- Shunt capacitor banks connected to ground (modeled in NetworkLine as self-branches with R='NaN', wL='NaN'):
+  * Bus 10: Shunt susceptance wC = 0.19 pu.
+  * Bus 24: Shunt susceptance wC = 0.043 pu.
+
+Intermediate Network & Transformers:
+- Buses 3, 4, 6, 7, 9, 10, 12, 14-30 are PQ load and intermediate transit buses (Apparatus Type 100).
+- Include all transmission lines and off-nominal transformer branches:
+  * Line 6-9: TurnsRatio = 0.978, X = 0.208 pu
+  * Line 6-10: TurnsRatio = 0.969, X = 0.556 pu
+  * Line 4-12: TurnsRatio = 0.932, X = 0.256 pu
+  * Line 28-27: TurnsRatio = 0.968, X = 0.396 pu

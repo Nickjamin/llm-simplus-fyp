@@ -1,0 +1,1 @@
+Need a 4 bus AC system at 50Hz. Bus 1 slack (V=1.0), bus 2 PV gen outputting 1.2 pu (Type 0 machine). Loads are at bus 3 (PL=0.8, QL=0.2) and bus 4 (PL=0.4). Lines are: 1 to 2 has R=0.01, X=0.05. 2 to 3 has R=0.02, X=0.1. 3 to 4 is R=0.01, X=0.08. 1 to 4 is R=0.015, X=0.06. No line charging anywhere.

@@ -1,0 +1,88 @@
+
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+Print power flow result:
+The format below is "| bus | P | Q | V | angle | omega |". P and Q are in load convention.
+
+ListPowerFlow =
+
+    1.0000   -0.5031   -0.2306    1.0000         0  314.1593
+    2.0000    0.5000    0.2000    0.9731   -0.0493  314.1593
+
+Get the descriptor state space model of network lines...
+Get the descriptor state space model of bus apparatuses...
+Get the appended descriptor state space model of all apparatuses...
+Get the descriptor state space model of whole system...
+Check if the whole system is proper:
+Proper!
+Calculate the minimum realization of the system model for later use...
+
+Print state space model: 
+Whole system port model (descriptor state space): GsysDss
+Print ports of GsysDss:
+
+  Model state in order:
+    Apparatus 1:
+        (1) epsilon1, (2) i_d1, (3) i_q1, (4) w1, (5) theta1
+    Network line:
+        (6) id1-2, (7) iq1-2, (8) id1-2, (9) iq1-2, (10) id1-2, (11) iq1-2, 
+        (12) id1-2, (13) iq1-2, (14) xi2-2, (15) xi2-2, (16) id2-2, (17) iq2-2, 
+        (18) xi_1, (19) xi_2, (20) xi_3, (21) xi_4
+
+  Model input in order:
+    Bus 1:
+        (1) v_d1, (2) v_q1, (3) T_m1, (4) v_ex1
+    Bus 2:
+        (5) v_d2, (6) v_q2
+
+  Model output in order:
+    Bus 1:
+        (1) i_d1, (2) i_q1, (3) w1, (4) i_ex1, (5) theta1
+    Bus 2:
+        (6) i_d2, (7) i_q2
+
+Other models saved in workspace: 
+Whole system port model (state space): GsysSs
+Whole system admittance model (descriptor state space): YsysDss
+Whole system admittance model (state space): YsysSs
+
+Calculate pole/zero...
+Check if the system is stable:
+Stable!
+
+==================================
+Plot Fundamentals 
+==================================
+
+Plot Fundamentals:
+Warning: The plot of pole map is disabled.
+Warning: The plot of admittance spectrum is disabled.
+
+==================================
+Grid Strength Analysis
+==================================
+Plot grid strength.
+
+==================================
+Synchronization Analysis
+==================================
+Warning: The synchronisation analysis is disabled.
+
+=================================
+Simulink Model
+=================================
+Warning: The auto creation of simulink model is disabled.
+
+==================================
+End: Run Successfully.
+==================================
+

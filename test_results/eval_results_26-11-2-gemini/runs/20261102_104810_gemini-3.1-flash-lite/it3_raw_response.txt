@@ -1,0 +1,38 @@
+{
+  "Basic": {
+    "Fs": 25000,
+    "Fbase": 60.0,
+    "Sbase": 100000000.0,
+    "Vbase": 230000.0
+  },
+  "Advance": {
+    "DirectFeedthrough": 0
+  },
+  "Bus": [
+    { "BusNo": 1, "BusType": 1, "Voltage": 1.04, "Theta": 0.0 },
+    { "BusNo": 2, "BusType": 2, "Voltage": 1.025, "Theta": 0.0, "PGi": 1.63 },
+    { "BusNo": 3, "BusType": 2, "Voltage": 1.025, "Theta": 0.0, "PGi": 0.85 },
+    { "BusNo": 4, "BusType": 3 },
+    { "BusNo": 5, "BusType": 3, "PLi": 1.25, "QLi": 0.5 },
+    { "BusNo": 6, "BusType": 3, "PLi": 0.9, "QLi": 0.3 },
+    { "BusNo": 7, "BusType": 3 },
+    { "BusNo": 8, "BusType": 3, "PLi": 1.0, "QLi": 0.35 },
+    { "BusNo": 9, "BusType": 3 }
+  ],
+  "NetworkLine": [
+    { "FromBus": 1, "ToBus": 4, "R": 0.0, "wL": 0.0576 },
+    { "FromBus": 4, "ToBus": 5, "R": 0.017, "wL": 0.092 },
+    { "FromBus": 5, "ToBus": 6, "R": 0.039, "wL": 0.17 },
+    { "FromBus": 6, "ToBus": 3, "R": 0.0, "wL": 0.0586 },
+    { "FromBus": 6, "ToBus": 7, "R": 0.0119, "wL": 0.1008 },
+    { "FromBus": 7, "ToBus": 8, "R": 0.0085, "wL": 0.072 },
+    { "FromBus": 8, "ToBus": 2, "R": 0.0, "wL": 0.0625 },
+    { "FromBus": 8, "ToBus": 9, "R": 0.0119, "wL": 0.1008 },
+    { "FromBus": 9, "ToBus": 4, "R": 0.0085, "wL": 0.072 }
+  ],
+  "Apparatus": [
+    { "BusNo": 1, "Type": 0 },
+    { "BusNo": 2, "Type": 30, "ParaOverrides": { "R_f": 0.01, "L_f": 0.05, "C_f": 0.05, "R_c": 0.01, "L_c": 0.05 } },
+    { "BusNo": 3, "Type": 0 }
+  ]
+}

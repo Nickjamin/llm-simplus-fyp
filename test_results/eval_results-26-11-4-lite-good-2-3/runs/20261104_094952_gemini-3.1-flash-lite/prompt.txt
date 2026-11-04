@@ -1,0 +1,7 @@
+Create a 50 Hz SimplusGT model representing a droop-controlled grid-forming (GFM) inverter feeding into an infinite bus.
+
+- Simulation settings: Fs = 50000 Hz, Fbase = 50.0 Hz, Gauss-Seidel power flow.
+- Bus 1 is an Infinite Bus (Type 90) acting as the slack bus at 1.0 pu voltage.
+- Bus 2 is connected to Bus 1 via a short line with series R = 0.02 pu and inductive reactance wL = 0.1 pu (no shunt line charging).
+- Bus 2 connects a droop-controlled GFM inverter (Type 20) with nominal terminal voltage (1.0 pu) and standard default control parameters, injecting near-zero active power and 0.0001 pu reactive power.
+- Enable Simulink model creation.

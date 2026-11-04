@@ -1,0 +1,27 @@
+Configure the 16-machine, 5-area, 68-bus benchmark power system (NETS-NYPS interconnection) for SimplusGT at 60 Hz.
+
+System Settings:
+- Base Grid Frequency: 60.0 Hz, Sampling Frequency: 30000 Hz, Newton-Raphson power flow, DiscretizationMethod: 2 (Backward Euler).
+- 68 buses total across 5 interconnected areas.
+
+Generation Assets (16 Synchronous Machines, Type 0):
+- Bus 1 (Slack): V = 1.0 pu, PGi = 40.0 pu, connected to Bus 18 via step-up transformer (X = 0.003 pu). Machine: J = 300.0, D = 75.0, wL = 0.0041 pu, R = 0.000683 pu.
+- Bus 2 (PV): V = 0.98 pu, PGi = 5.45 pu, connects to Bus 58 (X = 0.025 pu, tap = 1.07). J = 30.2, D = 7.55, wL = 0.035 pu, R = 0.005833 pu.
+- Bus 3 (PV): V = 0.983 pu, PGi = 6.5 pu, connects to Bus 62 (X = 0.02 pu, tap = 1.07). J = 35.8, D = 8.95, wL = 0.0304 pu, R = 0.005067 pu.
+- Bus 4 (PV): V = 0.997 pu, PGi = 6.32 pu, connects to Bus 19 (R = 0.0007 pu, X = 0.0142 pu, tap = 1.07). J = 28.6, D = 7.15, wL = 0.0295 pu, R = 0.004917 pu.
+- Bus 5 (PV): V = 1.011 pu, PGi = 5.05 pu, connects to Bus 20 (R = 0.0009 pu, X = 0.018 pu, tap = 1.009). J = 26.0, D = 6.5, wL = 0.027 pu, R = 0.0045 pu.
+- Bus 6 (PV): V = 1.05 pu, PGi = 7.0 pu, connects to Bus 22 (X = 0.0143 pu, tap = 1.025). J = 34.8, D = 8.7, wL = 0.0224 pu, R = 0.003733 pu.
+- Bus 7 (PV): V = 1.063 pu, PGi = 5.6 pu, connects to Bus 23 (R = 0.0005 pu, X = 0.0272 pu). J = 26.4, D = 6.6, wL = 0.0322 pu, R = 0.005367 pu.
+- Bus 8 (PV): V = 1.03 pu, PGi = 5.4 pu, connects to Bus 25 (R = 0.0006 pu, X = 0.0232 pu, tap = 1.025). J = 24.3, D = 6.075, wL = 0.028 pu, R = 0.004667 pu.
+- Bus 9 (PV): V = 1.025 pu, PGi = 8.0 pu, connects to Bus 29 (R = 0.0008 pu, X = 0.0156 pu, tap = 1.025). J = 34.5, D = 8.625, wL = 0.0298 pu, R = 0.004967 pu.
+- Bus 10 (PV): V = 1.01 pu, PGi = 5.0 pu, connects to Bus 31 (X = 0.026 pu, tap = 1.04). J = 31.0, D = 7.75, wL = 0.0199 pu, R = 0.003317 pu.
+- Bus 11 (PV): V = 1.0 pu, PGi = 10.0 pu, connects to Bus 32 (X = 0.013 pu, tap = 1.04). J = 28.2, D = 7.05, wL = 0.0103 pu, R = 0.001717 pu.
+- Bus 12 (PV): V = 1.0156 pu, PGi = 13.5 pu, connects to Bus 36 (X = 0.0075 pu, tap = 1.04). J = 92.3, D = 23.075, wL = 0.022 pu, R = 0.003667 pu.
+- Bus 13 (PV): V = 1.011 pu, PGi = 35.91 pu, connects to Bus 17 (X = 0.0033 pu, tap = 1.04). J = 248.0, D = 62.0, wL = 0.003 pu, R = 0.0005 pu.
+- Bus 14 (PV): V = 1.0 pu, PGi = 17.85 pu, connects to Bus 41 (X = 0.0015 pu). J = 300.0, D = 75.0, wL = 0.0017 pu, R = 0.000283 pu.
+- Bus 15 (PV): V = 1.0 pu, PGi = 10.0 pu, connects to Bus 42 (X = 0.0015 pu). J = 300.0, D = 75.0, wL = 0.0017 pu, R = 0.000283 pu.
+- Bus 16 (PV): V = 1.045 pu, PGi = 2.5 pu, connects to Bus 54 (X = 0.0181 pu, tap = 1.025). J = 42.0, D = 10.5, wL = 0.0125 pu, R = 0.002083 pu.
+
+Network and Intermediate Buses:
+- Buses 17 through 68 are PQ load and intermediate transit buses (Apparatus Type 100), with heavy load centers located at Bus 17 (60.0 pu P), Bus 18 (24.7 pu P), Bus 41 (10.0 pu P), and Bus 42 (11.5 pu P).
+- Full meshed network transmission lines across NETS (New England Test System), NYPS (New York Power System), and external areas 3, 4, 5.

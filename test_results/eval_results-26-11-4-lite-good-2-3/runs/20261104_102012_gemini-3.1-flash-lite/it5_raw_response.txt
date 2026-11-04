@@ -1,0 +1,46 @@
+{
+  "Basic": {
+    "Fs": 25000,
+    "Fbase": 50.0,
+    "Sbase": 1.0,
+    "Vbase": 1.0
+  },
+  "Advance": {
+    "DiscretizationMethod": 2,
+    "PowerFlowAlgorithm": 2,
+    "EnableCreateSimulinkModel": 0,
+    "EnablePrintOutput": 0
+  },
+  "Bus": [
+    {
+      "BusNo": 1,
+      "BusType": 1,
+      "Voltage": 1.0,
+      "Theta": 0.0
+    },
+    {
+      "BusNo": 2,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0
+    }
+  ],
+  "NetworkLine": [
+    {
+      "FromBus": 1,
+      "ToBus": 2,
+      "R": 0.01,
+      "wL": 0.1
+    }
+  ],
+  "Apparatus": [
+    {
+      "BusNo": 1,
+      "Type": 90
+    },
+    {
+      "BusNo": 2,
+      "Type": 100
+    }
+  ]
+}

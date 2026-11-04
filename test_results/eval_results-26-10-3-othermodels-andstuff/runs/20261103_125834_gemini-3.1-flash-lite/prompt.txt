@@ -1,0 +1,25 @@
+Configure the standard IEEE 14-bus transmission benchmark system for SimplusGT running at 60 Hz.
+
+Grid Settings:
+- Base Grid Frequency: 60.0 Hz, Sampling Frequency: 30000 Hz, Newton-Raphson power flow (Algorithm 2), DiscretizationMethod: 2 (Backward Euler).
+- 14 buses total with 20 transmission lines/transformers and 1 shunt capacitor bank.
+
+Generation & Condensers (5 Synchronous Machines, Type 0):
+- All 5 machines share identical dynamic parameters: J = 3.5, D = 5.0, stator reactance wL = 0.10 pu, stator resistance R = 0.01 pu.
+- Bus 1 (Slack Bus): Voltage = 1.06 pu, PGi = 0.0 pu, QGi = 0.0 pu, PLi = 0.0 pu, QLi = 0.0 pu.
+- Bus 2 (PV Generator): Voltage = 1.045 pu, PGi = 0.40 pu, QGi = 0.424 pu, local load PLi = 0.217 pu, QLi = 0.127 pu, Q limits = [-0.4, 0.5].
+- Synchronous Condensers (PV Buses with PGi = 0 providing voltage regulation):
+  * Bus 3: Voltage = 1.01 pu, QGi = 0.234 pu, local load PLi = 0.942 pu, QLi = 0.19 pu, Q limits = [0.0, 0.4].
+  * Bus 6: Voltage = 1.07 pu, QGi = 0.122 pu, local load PLi = 0.112 pu, QLi = 0.075 pu, Q limits = [-0.06, 0.24].
+  * Bus 8: Voltage = 1.09 pu, QGi = 0.174 pu, no local load, Q limits = [-0.06, 0.24].
+
+Passive Shunt Compensation:
+- Bus 9 has a fixed shunt capacitor bank to ground with susceptance wC = 0.19 pu (model in NetworkLine as a self-branch on Bus 9 with R='NaN' and wL='NaN').
+
+Intermediate Network & Transformers:
+- Bus 4 has a leading power factor load: PLi = 0.478 pu, QLi = -0.039 pu.
+- Buses 5, 7, 9, 10, 11, 12, 13, 14 are PQ load/transit buses (Apparatus Type 100).
+- Include all transmission lines and off-nominal transformer branches:
+  * Line 4-7: TurnsRatio = 0.978, X = 0.20912 pu, R = 0
+  * Line 4-9: TurnsRatio = 0.969, X = 0.55618 pu, R = 0
+  * Line 5-6: TurnsRatio = 0.932, X = 0.25202 pu, R = 0

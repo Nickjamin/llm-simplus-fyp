@@ -1,0 +1,22 @@
+Configure the 10-generator, 39-bus New England benchmark power system modified as a 100% inverter-based grid (5 GFM, 5 GFL) in SimplusGT at 60 Hz.
+
+Grid Settings:
+- Base Grid Frequency: 60.0 Hz, Sampling Frequency: 30000 Hz, Newton-Raphson power flow (Algorithm 2), DiscretizationMethod: 2 (Backward Euler).
+- 39 buses total (Note: Bus 1 and Bus 39 positions are swapped relative to standard IEEE 39 convention).
+
+Slack & Generation Assets (All Inverters):
+- Bus 1 is the Slack Bus (BusType: 1) held at 1.03 pu voltage, generating 10.0 pu active power, with a local load of 11.04 pu P and 2.50 pu Q. Hosted apparatus: Grid-Following Inverter (Type 11) with overrides: V_dc = 2.2, C_dc = 2.2, f_v_dc = 0.01.
+- Grid-Forming Inverters (Type 20 on PV Buses 30 to 34):
+  * Bus 30: V = 1.0475 pu, PGi = 2.5 pu, apparatus Type 20 with overrides: wLf = 0.05, Rf = 0.0, wCf = 0.02, wLc = 0.1, Rc = 0.0, Xov = 0.0, Dw = 50.0, fdroop = 4.2, fvdq = 300.0, fidq = 1000.0.
+  * Bus 31: V = 0.9820 pu, PGi = 5.729 pu, apparatus Type 20 with overrides: wLf = 0.05, Rf = 0.0, wCf = 0.02, wLc = 0.1, Rc = 0.0, Xov = 0.0, Dw = 50.0, fdroop = 3.03, fvdq = 300.0, fidq = 1000.0.
+  * Bus 32: V = 0.9831 pu, PGi = 6.5 pu, apparatus Type 20 with overrides: wLf = 0.05, Rf = 0.0, wCf = 0.02, wLc = 0.1, Rc = 0.0, Xov = 0.0, Dw = 50.0, fdroop = 3.58, fvdq = 300.0, fidq = 1000.0.
+  * Bus 33: V = 0.9972 pu, PGi = 6.32 pu, apparatus Type 20 with overrides: wLf = 0.05, Rf = 0.0, wCf = 0.02, wLc = 0.1, Rc = 0.0, Xov = 0.0, Dw = 50.0, fdroop = 2.86, fvdq = 300.0, fidq = 1000.0.
+  * Bus 34: V = 1.0123 pu, PGi = 5.08 pu, apparatus Type 20 with overrides: wLf = 0.05, Rf = 0.0, wCf = 0.02, wLc = 0.1, Rc = 0.0, Xov = 0.0, Dw = 50.0, fdroop = 2.60, fvdq = 300.0, fidq = 1000.0.
+- Grid-Following Inverters (Type 11 on PV Buses 35 to 38, all with overrides: V_dc = 2.2, C_dc = 2.2, f_v_dc = 0.01):
+  * Bus 35: V = 1.0493 pu, PGi = 6.5 pu.
+  * Bus 36: V = 1.0635 pu, PGi = 5.6 pu.
+  * Bus 37: V = 1.0278 pu, PGi = 5.4 pu.
+  * Bus 38: V = 1.0265 pu, PGi = 8.3 pu.
+
+Intermediate Network:
+- Buses 2 through 29, and Bus 39 are PQ buses (BusType: 3, Apparatus Type 100) forming the New England transmission mesh, with step-up transformers connecting to the generation buses (e.g. Lines 2-30, 19-33, 20-34, 22-35, 23-36, 25-37, 29-38 with turns ratios 1.025 to 1.07, and Line 31-6 with turns ratio 0.9).

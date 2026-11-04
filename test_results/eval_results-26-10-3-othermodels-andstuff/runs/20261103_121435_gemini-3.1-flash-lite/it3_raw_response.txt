@@ -1,0 +1,52 @@
+{
+  "Basic": {
+    "Fs": 25000,
+    "Fbase": 60.0,
+    "Sbase": 100000000.0,
+    "Vbase": 230000.0
+  },
+  "Advance": {
+    "PowerFlowAlgorithm": 2,
+    "EnableCreateSimulinkModel": 0,
+    "EnablePrintOutput": 1
+  },
+  "Bus": [
+    {"BusNo": 1, "BusType": 1, "Voltage": 1.04},
+    {"BusNo": 2, "BusType": 2, "Voltage": 1.025, "PGi": 1.63},
+    {"BusNo": 3, "BusType": 2, "Voltage": 1.025, "PGi": 0.85},
+    {"BusNo": 4, "BusType": 3},
+    {"BusNo": 5, "BusType": 3, "PLi": 1.25, "QLi": 0.5},
+    {"BusNo": 6, "BusType": 3, "PLi": 0.9, "QLi": 0.3},
+    {"BusNo": 7, "BusType": 3},
+    {"BusNo": 8, "BusType": 3, "PLi": 1.0, "QLi": 0.35},
+    {"BusNo": 9, "BusType": 3}
+  ],
+  "NetworkLine": [
+    {"FromBus": 1, "ToBus": 4, "R": 0.0001, "wL": 0.0576},
+    {"FromBus": 2, "ToBus": 7, "R": 0.0001, "wL": 0.0625},
+    {"FromBus": 3, "ToBus": 9, "R": 0.0001, "wL": 0.0586},
+    {"FromBus": 4, "ToBus": 5, "R": 0.01, "wL": 0.085},
+    {"FromBus": 4, "ToBus": 4, "R": "NaN", "wL": "NaN", "wC": 0.088},
+    {"FromBus": 5, "ToBus": 5, "R": "NaN", "wL": "NaN", "wC": 0.088},
+    {"FromBus": 4, "ToBus": 6, "R": 0.017, "wL": 0.092},
+    {"FromBus": 4, "ToBus": 4, "R": "NaN", "wL": "NaN", "wC": 0.079},
+    {"FromBus": 6, "ToBus": 6, "R": "NaN", "wL": "NaN", "wC": 0.079},
+    {"FromBus": 5, "ToBus": 7, "R": 0.032, "wL": 0.161},
+    {"FromBus": 5, "ToBus": 5, "R": "NaN", "wL": "NaN", "wC": 0.153},
+    {"FromBus": 7, "ToBus": 7, "R": "NaN", "wL": "NaN", "wC": 0.153},
+    {"FromBus": 6, "ToBus": 9, "R": 0.039, "wL": 0.17},
+    {"FromBus": 6, "ToBus": 6, "R": "NaN", "wL": "NaN", "wC": 0.179},
+    {"FromBus": 9, "ToBus": 9, "R": "NaN", "wL": "NaN", "wC": 0.179},
+    {"FromBus": 7, "ToBus": 8, "R": 0.0085, "wL": 0.072},
+    {"FromBus": 7, "ToBus": 7, "R": "NaN", "wL": "NaN", "wC": 0.0745},
+    {"FromBus": 8, "ToBus": 8, "R": "NaN", "wL": "NaN", "wC": 0.0745},
+    {"FromBus": 8, "ToBus": 9, "R": 0.0119, "wL": 0.1008},
+    {"FromBus": 8, "ToBus": 8, "R": "NaN", "wL": "NaN", "wC": 0.1045},
+    {"FromBus": 9, "ToBus": 9, "R": "NaN", "wL": "NaN", "wC": 0.1045}
+  ],
+  "Apparatus": [
+    {"BusNo": 1, "Type": 0, "ParaOverrides": {"J": 23.64, "D": 5.91}},
+    {"BusNo": 2, "Type": 0, "ParaOverrides": {"J": 6.4, "D": 1.6}},
+    {"BusNo": 3, "Type": 0, "ParaOverrides": {"J": 3.01, "D": 0.7525}}
+  ]
+}

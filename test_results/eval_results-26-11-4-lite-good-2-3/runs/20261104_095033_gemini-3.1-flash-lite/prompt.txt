@@ -1,0 +1,18 @@
+Configure a 10-bus hybrid renewable plant (PV + BESS) connected to a medium-voltage infinite grid at 50 Hz in SimplusGT.
+
+Grid Architecture:
+- Base settings: Fs = 100000 Hz, Fbase = 50.0 Hz, Gauss-Seidel power flow.
+- Bus 1 is an Infinite Bus (Type 90) acting as the slack bus held at 1.0 pu voltage.
+- Buses 2 through 10 are PV generator buses regulated at 1.0 pu terminal voltage, each generating 0.15 pu active power (QGi = 0, PLi = 0, QLi = 0, Q limits = [-999, 999]).
+
+Collector Network Topology (3 radial strings originating from Bus 2):
+- Intertie: Line 1-2 has R = 0.02 pu, wL = 0.1 pu.
+- String 1: Line 2-3 and Line 3-4 each have R = 0.02 pu, wL = 0.1 pu.
+- String 2: Bus 2 connects to Bus 5 via a low-impedance trunk line (R = 6e-5 pu, wL = 0.0003 pu). Collector lines 5-6 and 6-7 each have R = 0.02 pu, wL = 0.1 pu.
+- String 3: Bus 2 connects to Bus 8 via a low-impedance trunk line (R = 6e-5 pu, wL = 0.0003 pu). Collector lines 8-9 and 9-10 each have R = 0.02 pu, wL = 0.1 pu.
+- All line charging wC and shunt G are 0; TurnsRatio = 1.0.
+
+Apparatus Configuration (Interleaved PV and BESS):
+- Bus 1: Infinite Bus (Type 90).
+- Even buses (Buses 2, 4, 6, 8, 10): Battery Energy Storage Systems (Type 30) with wLf = 0.05, Rf = 0.01, wCf = 0.02, wLc = 0.3, Rc = 0.06, Xov = 0.01, Dw = 0.05, fdroop = 5, fvdq = 250, fidq = 1000, L_dc = 0.000125, C_dc = 0.224, v_ocv = 0.625, R_bat = 0.0625, v_dc_ref = 1.0, fvdc = 50, fibat = 500.
+- Odd buses (Buses 3, 5, 7, 9): Grid-forming PV generators (Type 40) with wLf = 0.05, Rf = 0.01, wCf = 0.02, wLc = 0.3, Rc = 0.06, Xov = 0, N = 0.2, R = 0.05, fvdq = 250, fidq = 1000, Sair = 1000, Tair = 25, C_dc = 1.0, v_pv_ref = 0.8, v_dc_ref = 1.0, fvdc = 100, fidc = 500.

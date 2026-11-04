@@ -1,0 +1,247 @@
+{
+  "Basic": {
+    "Fs": 25000,
+    "Fbase": 60.0,
+    "Sbase": 100000000.0,
+    "Vbase": 230000.0
+  },
+  "Advance": {
+    "DiscretizationMethod": 2,
+    "LinearizationTimes": 1,
+    "DiscretizationDampingFlag": 1,
+    "DirectFeedthrough": 0,
+    "PowerFlowAlgorithm": 1,
+    "EnableCreateSimulinkModel": 0,
+    "EnablePlotPole": 1,
+    "EnablePlotAdmittance": 1,
+    "EnablePrintOutput": 1
+  },
+  "Bus": [
+    {
+      "BusNo": 1,
+      "BusType": 1,
+      "Voltage": 1.04,
+      "Theta": 0.0,
+      "PGi": 0.716,
+      "QGi": 0.27,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 2,
+      "BusType": 2,
+      "Voltage": 1.025,
+      "Theta": 0.0,
+      "PGi": 1.63,
+      "QGi": 0.066,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 3,
+      "BusType": 2,
+      "Voltage": 1.025,
+      "Theta": 0.0,
+      "PGi": 0.85,
+      "QGi": -0.109,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 4,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 5,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 1.25,
+      "QLi": 0.5,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 6,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.9,
+      "QLi": 0.3,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 7,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 8,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 1.0,
+      "QLi": 0.35,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 9,
+      "BusType": 3,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "Qmin": -999.0,
+      "Qmax": 999.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    }
+  ],
+  "NetworkLine": [
+    {
+      "FromBus": 1,
+      "ToBus": 4,
+      "R": 0.0,
+      "wL": 0.0576,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 4,
+      "ToBus": 5,
+      "R": 0.01,
+      "wL": 0.085,
+      "wC": 0.088,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 5,
+      "ToBus": 7,
+      "R": 0.032,
+      "wL": 0.161,
+      "wC": 0.153,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 7,
+      "ToBus": 2,
+      "R": 0.0,
+      "wL": 0.0625,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 7,
+      "ToBus": 8,
+      "R": 0.0085,
+      "wL": 0.072,
+      "wC": 0.0745,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 8,
+      "ToBus": 9,
+      "R": 0.0119,
+      "wL": 0.1008,
+      "wC": 0.1045,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 9,
+      "ToBus": 6,
+      "R": 0.039,
+      "wL": 0.17,
+      "wC": 0.179,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 6,
+      "ToBus": 4,
+      "R": 0.017,
+      "wL": 0.092,
+      "wC": 0.079,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 9,
+      "ToBus": 3,
+      "R": 0.0,
+      "wL": 0.0586,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    }
+  ],
+  "Apparatus": [
+    {
+      "BusNo": 1,
+      "Type": 0,
+      "ParaOverrides": null
+    },
+    {
+      "BusNo": 2,
+      "Type": 30,
+      "ParaOverrides": null
+    },
+    {
+      "BusNo": 3,
+      "Type": 0,
+      "ParaOverrides": null
+    }
+  ]
+}

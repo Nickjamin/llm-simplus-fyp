@@ -1,6 +1,8 @@
+import math
 from typing import Dict, List, Literal, Optional, Union
 from pydantic import BaseModel, Field, model_validator
 from defaults import AC_DEFAULT_PARA, get_base_type_key
+from collections import deque
 
 class BasicSettings(BaseModel):
     Fs: int = Field(default=25000, description="Sampling frequency in Hz")
@@ -15,8 +17,8 @@ class AdvanceSettings(BaseModel):
     DirectFeedthrough: Literal[0, 1] = 0
     PowerFlowAlgorithm: Literal[1, 2] = Field(default=1, description="1: Gauss-Seidel, 2: Newton-Raphson")
     EnableCreateSimulinkModel: Literal[0, 1] = 0
-    EnablePlotPole: Literal[0, 1] = 1
-    EnablePlotAdmittance: Literal[0, 1] = 1
+    EnablePlotPole: Literal[0, 1] = 0
+    EnablePlotAdmittance: Literal[0, 1] = 0
     EnablePrintOutput: Literal[0, 1] = 1
 
 class BusItem(BaseModel):
@@ -45,8 +47,10 @@ class NetworkLineItem(BaseModel):
     @model_validator(mode="after")
     def validate_branch_physics(self) -> "NetworkLineItem":
         if self.FromBus == self.ToBus:
-            if self.R != "NaN" and self.R != 0:
+            if self.R not in ("NaN", 0):
                 raise ValueError(f"Self-branch on Bus {self.FromBus} must have R='NaN' or 0.")
+            if self.wL not in ("NaN", 0):
+                raise ValueError(f"Self-branch on Bus {self.FromBus} must have wL='NaN' or 0.")
             if self.wC == 0 and self.G == 0:
                 raise ValueError(f"Self-branch on Bus {self.FromBus} is open-circuit (wC=0 and G=0).")
         else:
@@ -54,8 +58,14 @@ class NetworkLineItem(BaseModel):
                 raise ValueError(f"Line {self.FromBus}-{self.ToBus} cannot have 'NaN' series R or wL.")
             if self.R < 0 or self.wL < 0:
                 raise ValueError("Line R and wL must be non-negative.")
-            if self.R == 0 and self.wL == 0:
-                raise ValueError(f"Line {self.FromBus}-{self.ToBus} is a short-circuit (R=0 and wL=0).")
+            
+            # New: Minimum Impedance Magnitude Check for Y-Bus Stability
+            z_mag = math.hypot(float(self.R), float(self.wL))
+            if z_mag < 1e-4:
+                raise ValueError(
+                    f"Line {self.FromBus}-{self.ToBus} series impedance is too low (R={self.R}, wL={self.wL}). "
+                    f"Magnitude {z_mag:.1e} will cause a singular Y-bus matrix. Increase R or wL."
+                )
         return self
 
 AllowedAcApparatusTypes = Literal[
@@ -110,4 +120,56 @@ class SimplusGTModelLLM(BaseModel):
             if b_no not in expected_nos:
                 raise ValueError(f"Apparatus connected to non-existent BusNo {b_no}.")
 
+        return self
+
+    @model_validator(mode="after")
+    def validate_network_connectivity(self) -> "SimplusGTModelLLM":
+        bus_nos = {b.BusNo for b in self.Bus}
+        
+        # 1. Dangling Lines Check: Ensure all lines connect to actual buses
+        for idx, line in enumerate(self.NetworkLine):
+            if line.FromBus not in bus_nos:
+                raise ValueError(f"NetworkLine branch references non-existent FromBus {line.FromBus}.")
+            if line.ToBus not in bus_nos:
+                raise ValueError(f"NetworkLine branch references non-existent ToBus {line.ToBus}.")
+
+        # 2. Electrical Island Check: Ensure the grid is a single connected component
+        if not bus_nos:
+            return self
+            
+        adj = {b: set() for b in bus_nos}
+        for line in self.NetworkLine:
+            if line.FromBus != line.ToBus:  # Ignore shunt self-branches
+                adj[line.FromBus].add(line.ToBus)
+                adj[line.ToBus].add(line.FromBus)
+        
+        visited = set()
+        queue = deque([next(iter(bus_nos))])
+        
+        while queue:
+            curr = queue.popleft()
+            if curr not in visited:
+                visited.add(curr)
+                queue.extend(adj[curr] - visited)
+                
+        unvisited = bus_nos - visited
+        if unvisited:
+            raise ValueError(
+                f"Grid topology is disconnected. Isolated buses found: {sorted(unvisited)}. "
+                "SimplusGT power flow requires a single connected electrical island."
+            )
+                             
+        return self
+
+    @model_validator(mode="after")
+    def validate_dynamic_elements(self) -> "SimplusGTModelLLM":
+        # Types 90 (Infinite Bus) and 100 (Floating Bus) do not provide dynamic states
+        dynamic_types = {0, 10, 11, 12, 20, 30, 40, 41, 50, 51, 60, 61, 62, 63, 64, 65}
+        
+        has_dynamic = any(app.Type in dynamic_types for app in self.Apparatus)
+        if not has_dynamic:
+            raise ValueError(
+                "The grid contains no dynamic components. You must include at least one "
+                "generator or inverter (e.g., Type 0, 10, 20) to construct the state-space model."
+            )
         return self

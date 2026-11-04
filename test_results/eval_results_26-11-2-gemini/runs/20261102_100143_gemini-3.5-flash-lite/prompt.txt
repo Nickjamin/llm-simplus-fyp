@@ -1,0 +1,1 @@
+Create a classic single machine infinite bus (SMIB) system at 60Hz. The infinite bus is Bus 1. It connects to Bus 2 over a lossless line with wL = 0.5 pu. Bus 2 has a 2nd-order synchronous generator supplying 0.8 pu active power, plus a shunt capacitor with wC = 0.1 pu connected to ground. Just use the default parameters for the generator.

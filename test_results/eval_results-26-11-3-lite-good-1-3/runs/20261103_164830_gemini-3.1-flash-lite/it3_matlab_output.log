@@ -1,0 +1,24 @@
+
+[ERROR] MATLAB execution timed out after 60s.
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  7.313732e-19.
+> In SimplusGT.PowerFlow.PowerFlowNR (line 146)
+In SimplusGT.Toolbox.Main (line 115)
+In UserMain (line 54)
+
+Warning: Matrix is close to singular or badly scaled. Results may be inaccurate. RCOND =  4.127348e-17.
+> In SimplusGT.PowerFlow.PowerFlowNR (line 146)
+In SimplusGT.Toolbox.Main (line 115)
+In UserMain (line 54)
+
+

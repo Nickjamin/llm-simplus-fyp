@@ -1,0 +1,69 @@
+{
+  "Basic": {
+    "Fs": 25000,
+    "Fbase": 50.0,
+    "Sbase": 100000000.0,
+    "Vbase": 110000.0
+  },
+  "Advance": {
+    "PowerFlowAlgorithm": 1
+  },
+  "Bus": [
+    {
+      "BusNo": 1,
+      "BusType": 1,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.0,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    },
+    {
+      "BusNo": 2,
+      "BusType": 2,
+      "Voltage": 1.0,
+      "Theta": 0.0,
+      "PGi": 0.5,
+      "QGi": 0.0,
+      "PLi": 0.0,
+      "QLi": 0.0,
+      "AreaNo": 1,
+      "AcDc": 1
+    }
+  ],
+  "NetworkLine": [
+    {
+      "FromBus": 1,
+      "ToBus": 2,
+      "R": 0.06,
+      "wL": 0.3,
+      "wC": 0.0,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    },
+    {
+      "FromBus": 2,
+      "ToBus": 2,
+      "R": "NaN",
+      "wL": "NaN",
+      "wC": 0.02,
+      "G": 0.0,
+      "TurnsRatio": 1.0
+    }
+  ],
+  "Apparatus": [
+    {
+      "BusNo": 1,
+      "Type": 90,
+      "ParaOverrides": null
+    },
+    {
+      "BusNo": 2,
+      "Type": 1,
+      "ParaOverrides": null
+    }
+  ]
+}

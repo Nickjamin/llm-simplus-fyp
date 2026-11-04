@@ -1,0 +1,121 @@
+
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+Print power flow result:
+The format below is "| bus | P | Q | V | angle | omega |". P and Q are in load convention.
+
+ListPowerFlow =
+
+    1.0000   -0.0003    0.1458    1.0000         0  376.9911
+    2.0000   -0.0000    0.0000    1.0053   -0.0018  376.9911
+    3.0000   -0.0000    0.0000    1.0073   -0.0024  376.9911
+    4.0000   -0.0000    0.0000    1.0077   -0.0026  376.9911
+    5.0000    0.0000   -0.0000    1.0077   -0.0026  376.9911
+
+Get the descriptor state space model of network lines...
+Get the descriptor state space model of bus apparatuses...
+Get the appended descriptor state space model of all apparatuses...
+Get the descriptor state space model of whole system...
+Check if the whole system is proper:
+Proper!
+Calculate the minimum realization of the system model for later use...
+
+Print state space model: 
+Whole system port model (descriptor state space): GsysDss
+Print ports of GsysDss:
+
+  Model state in order:
+    Apparatus 1:
+        (1) epsilon1, (2) i_d1, (3) i_q1, (4) w1, (5) theta1
+    Network line:
+        (6) vd1-1, (7) vq1-1, (8) xi1-1, (9) xi1-1, (10) vd1-1, (11) vq1-1, 
+        (12) xi1-1, (13) xi1-1, (14) id1-2, (15) iq1-2, (16) id1-3, (17) iq1-3, 
+        (18) id1-2, (19) iq1-2, (20) id1-3, (21) iq1-3, (22) id1-2, (23) iq1-2, 
+        (24) id1-2, (25) iq1-2, (26) vd2-2, (27) vq2-2, (28) xi2-2, (29) xi2-2, 
+        (30) vd2-2, (31) vq2-2, (32) xi2-2, (33) xi2-2, (34) vd2-2, (35) vq2-2, 
+        (36) xi2-2, (37) xi2-2, (38) vd2-2, (39) vq2-2, (40) xi2-2, (41) xi2-2, 
+        (42) id2-3, (43) iq2-3, (44) id2-4, (45) iq2-4, (46) id2-5, (47) iq2-5, 
+        (48) id2-3, (49) iq2-3, (50) id2-4, (51) iq2-4, (52) id2-5, (53) iq2-5, 
+        (54) id1-3, (55) iq1-3, (56) id2-3, (57) iq2-3, (58) id1-3, (59) iq1-3, 
+        (60) id2-3, (61) iq2-3, (62) vd3-3, (63) vq3-3, (64) xi3-3, (65) xi3-3, 
+        (66) vd3-3, (67) vq3-3, (68) xi3-3, (69) xi3-3, (70) vd3-3, (71) vq3-3, 
+        (72) xi3-3, (73) xi3-3, (74) id3-4, (75) iq3-4, (76) id3-4, (77) iq3-4, 
+        (78) id2-4, (79) iq2-4, (80) id3-4, (81) iq3-4, (82) id2-4, (83) iq2-4, 
+        (84) id3-4, (85) iq3-4, (86) vd4-4, (87) vq4-4, (88) xi4-4, (89) xi4-4, 
+        (90) vd4-4, (91) vq4-4, (92) xi4-4, (93) xi4-4, (94) vd4-4, (95) vq4-4, 
+        (96) xi4-4, (97) xi4-4, (98) id4-5, (99) iq4-5, (100) id4-5, (101) iq4-5, 
+        (102) id2-5, (103) iq2-5, (104) id4-5, (105) iq4-5, (106) id2-5, (107) iq2-5, 
+        (108) id4-5, (109) iq4-5, (110) vd5-5, (111) vq5-5, (112) xi5-5, (113) xi5-5, 
+        (114) vd5-5, (115) vq5-5, (116) xi5-5, (117) xi5-5, (118) xi_1, (119) xi_2, 
+        (120) xi_3, (121) xi_4, (122) xi_5, (123) xi_6, (124) xi_7, (125) xi_8, 
+        (126) xi_9, (127) xi_10
+
+  Model input in order:
+    Bus 1:
+        (1) v_d1, (2) v_q1, (3) T_m1, (4) v_ex1
+    Bus 2:
+        (5) v_d2, (6) v_q2
+    Bus 3:
+        (7) v_d3, (8) v_q3
+    Bus 4:
+        (9) v_d4, (10) v_q4
+    Bus 5:
+        (11) v_d5, (12) v_q5
+
+  Model output in order:
+    Bus 1:
+        (1) i_d1, (2) i_q1, (3) w1, (4) i_ex1, (5) theta1
+    Bus 2:
+        (6) i_d2, (7) i_q2
+    Bus 3:
+        (8) i_d3, (9) i_q3
+    Bus 4:
+        (10) i_d4, (11) i_q4
+    Bus 5:
+        (12) i_d5, (13) i_q5
+
+Other models saved in workspace: 
+Whole system port model (state space): GsysSs
+Whole system admittance model (descriptor state space): YsysDss
+Whole system admittance model (state space): YsysSs
+
+Calculate pole/zero...
+Check if the system is stable:
+Stable!
+
+==================================
+Plot Fundamentals 
+==================================
+
+Plot Fundamentals:
+Warning: The plot of pole map is disabled.
+Warning: The plot of admittance spectrum is disabled.
+
+==================================
+Grid Strength Analysis
+==================================
+Plot grid strength.
+
+==================================
+Synchronization Analysis
+==================================
+Warning: The synchronisation analysis is disabled.
+
+=================================
+Simulink Model
+=================================
+Warning: The auto creation of simulink model is disabled.
+
+==================================
+End: Run Successfully.
+==================================
+

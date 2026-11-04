@@ -1,0 +1,147 @@
+
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+Print power flow result:
+The format below is "| bus | P | Q | V | angle | omega |". P and Q are in load convention.
+
+ListPowerFlow =
+
+    1.0000   -0.6965   -0.0770    1.0400         0  376.9911
+    2.0000   -1.6300   -0.1903    1.0250    0.1143  376.9911
+    3.0000   -0.8500   -0.0607    1.0250   -0.0047  376.9911
+    4.0000   -0.0000    0.0000    1.0365   -0.0372  376.9911
+    5.0000    1.2500    0.5000    1.0061   -0.0852  376.9911
+    6.0000    0.9000    0.3000    1.0227   -0.0522  376.9911
+    7.0000   -0.0000    0.0000    1.0183    0.0165  376.9911
+    8.0000    1.0000    0.3500    1.0035   -0.0521  376.9911
+    9.0000   -0.0000   -0.0000    1.0416   -0.0445  376.9911
+
+Get the descriptor state space model of network lines...
+Get the descriptor state space model of bus apparatuses...
+Get the appended descriptor state space model of all apparatuses...
+Get the descriptor state space model of whole system...
+Check if the whole system is proper:
+Proper!
+Calculate the minimum realization of the system model for later use...
+
+Print state space model: 
+Whole system port model (descriptor state space): GsysDss
+Print ports of GsysDss:
+
+  Model state in order:
+    Apparatus 1:
+        (1) epsilon1, (2) i_d1, (3) i_q1, (4) w1, (5) theta1
+    Apparatus 2:
+        (6) epsilon2, (7) i_ld2, (8) i_lq2, (9) i_ld_i2, (10) i_lq_i2, (11) v_od2, 
+        (12) v_oq2, (13) v_od_i2, (14) v_oq_i2, (15) i_od2, (16) i_oq2, (17) v_d_ref2, 
+        (18) w2, (19) theta2, (20) i_bat2, (21) v_dc2, (22) i_bat_ref2, (23) duty_cycle2
+    Apparatus 3:
+        (24) epsilon3, (25) i_d3, (26) i_q3, (27) w3, (28) theta3
+    Network line:
+        (29) id1-4, (30) iq1-4, (31) id1-4, (32) iq1-4, (33) id2-7, (34) iq2-7, 
+        (35) id2-7, (36) iq2-7, (37) id3-6, (38) iq3-6, (39) id3-6, (40) iq3-6, 
+        (41) id1-4, (42) iq1-4, (43) id1-4, (44) iq1-4, (45) vd4-4, (46) vq4-4, 
+        (47) xi4-4, (48) xi4-4, (49) id4-5, (50) iq4-5, (51) id4-9, (52) iq4-9, 
+        (53) id4-5, (54) iq4-5, (55) id4-9, (56) iq4-9, (57) id4-5, (58) iq4-5, 
+        (59) id4-5, (60) iq4-5, (61) vd5-5, (62) vq5-5, (63) xi5-5, (64) xi5-5, 
+        (65) id5-5, (66) iq5-5, (67) id5-7, (68) iq5-7, (69) id5-7, (70) iq5-7, 
+        (71) id3-6, (72) iq3-6, (73) id3-6, (74) iq3-6, (75) vd6-6, (76) vq6-6, 
+        (77) xi6-6, (78) xi6-6, (79) id6-6, (80) iq6-6, (81) id6-8, (82) iq6-8, 
+        (83) id6-9, (84) iq6-9, (85) id6-8, (86) iq6-8, (87) id6-9, (88) iq6-9, 
+        (89) id2-7, (90) iq2-7, (91) id5-7, (92) iq5-7, (93) id2-7, (94) iq2-7, 
+        (95) id5-7, (96) iq5-7, (97) vd7-7, (98) vq7-7, (99) xi7-7, (100) xi7-7, 
+        (101) id7-8, (102) iq7-8, (103) id7-8, (104) iq7-8, (105) id6-8, (106) iq6-8, 
+        (107) id7-8, (108) iq7-8, (109) id6-8, (110) iq6-8, (111) id7-8, (112) iq7-8, 
+        (113) vd8-8, (114) vq8-8, (115) xi8-8, (116) xi8-8, (117) id8-8, (118) iq8-8, 
+        (119) id4-9, (120) iq4-9, (121) id6-9, (122) iq6-9, (123) id4-9, (124) iq4-9, 
+        (125) id6-9, (126) iq6-9, (127) vd9-9, (128) vq9-9, (129) xi9-9, (130) xi9-9, 
+        (131) xi_1, (132) xi_2, (133) xi_3, (134) xi_4, (135) xi_5, (136) xi_6, 
+        (137) xi_7, (138) xi_8, (139) xi_9, (140) xi_10, (141) xi_11, (142) xi_12, 
+        (143) xi_13, (144) xi_14, (145) xi_15, (146) xi_16, (147) xi_17, (148) xi_18
+
+  Model input in order:
+    Bus 1:
+        (1) v_d1, (2) v_q1, (3) T_m1, (4) v_ex1
+    Bus 2:
+        (5) v_d2, (6) v_q2, (7) P02
+    Bus 3:
+        (8) v_d3, (9) v_q3, (10) T_m3, (11) v_ex3
+    Bus 4:
+        (12) v_d4, (13) v_q4
+    Bus 5:
+        (14) v_d5, (15) v_q5
+    Bus 6:
+        (16) v_d6, (17) v_q6
+    Bus 7:
+        (18) v_d7, (19) v_q7
+    Bus 8:
+        (20) v_d8, (21) v_q8
+    Bus 9:
+        (22) v_d9, (23) v_q9
+
+  Model output in order:
+    Bus 1:
+        (1) i_d1, (2) i_q1, (3) w1, (4) i_ex1, (5) theta1
+    Bus 2:
+        (6) i_d2, (7) i_q2, (8) w2, (9) theta2, (10) v_dc2, (11) i_bat2, 
+        (12) p2
+    Bus 3:
+        (13) i_d3, (14) i_q3, (15) w3, (16) i_ex3, (17) theta3
+    Bus 4:
+        (18) i_d4, (19) i_q4
+    Bus 5:
+        (20) i_d5, (21) i_q5
+    Bus 6:
+        (22) i_d6, (23) i_q6
+    Bus 7:
+        (24) i_d7, (25) i_q7
+    Bus 8:
+        (26) i_d8, (27) i_q8
+    Bus 9:
+        (28) i_d9, (29) i_q9
+
+Other models saved in workspace: 
+Whole system port model (state space): GsysSs
+Whole system admittance model (descriptor state space): YsysDss
+Whole system admittance model (state space): YsysSs
+
+Calculate pole/zero...
+Check if the system is stable:
+Warning: Unstable!
+
+==================================
+Plot Fundamentals 
+==================================
+
+Plot Fundamentals:
+Warning: The plot of pole map is disabled.
+Warning: The plot of admittance spectrum is disabled.
+
+==================================
+Grid Strength Analysis
+==================================
+Plot grid strength.
+
+==================================
+Synchronization Analysis
+==================================
+Warning: The synchronisation analysis is disabled.
+
+=================================
+Simulink Model
+=================================
+Warning: The auto creation of simulink model is disabled.
+
+==================================
+End: Run Successfully.
+==================================
+

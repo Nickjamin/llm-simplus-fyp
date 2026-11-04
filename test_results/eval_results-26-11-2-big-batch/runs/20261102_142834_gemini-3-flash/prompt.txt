@@ -1,0 +1,1 @@
+Configure the standard IEEE 14-bus test system for SimplusGT at 60 Hz. Keep Bus 1 as the slack bus, but replace the synchronous condensers at Buses 3, 6, and 8 with Grid-Forming Inverters (Type 20) using default control parameters. Leave all other loads, transmission lines, and the Bus 9 shunt capacitor at their standard IEEE values.

@@ -1,0 +1,40 @@
+
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+Print power flow result:
+The format below is "| bus | P | Q | V | angle | omega |". P and Q are in load convention.
+
+ListPowerFlow =
+
+    1.0000   -0.0003    0.1332    1.0000         0  376.9911
+    2.0000   -0.0000    0.0000    1.0054   -0.0018  376.9911
+    3.0000   -0.0000    0.0000    1.0069   -0.0023  376.9911
+    4.0000   -0.0000    0.0000    1.0072   -0.0024  376.9911
+    5.0000   -0.0000   -0.0000    1.0076   -0.0025  376.9911
+
+Get the descriptor state space model of network lines...
+Get the descriptor state space model of bus apparatuses...
+Get the appended descriptor state space model of all apparatuses...
+Get the descriptor state space model of whole system...
+
+Error using SimplusGT.dss2ss
+Error: The system is improper.
+
+Error in SimplusGT.ObjDss2Ss (line 19)
+    Gss = SimplusGT.dss2ss(Gdss);
+
+Error in SimplusGT.Toolbox.Main (line 180)
+ObjYsysSs = SimplusGT.ObjDss2Ss(ObjYsysDss);
+
+Error in UserMain (line 54)
+SimplusGT.Toolbox.Main();  
+

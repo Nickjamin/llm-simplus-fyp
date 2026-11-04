@@ -8,13 +8,15 @@ RESULTS_DIR = Path("eval_results")
 RUNS_DIR = RESULTS_DIR / "runs"
 CSV_PATH = RESULTS_DIR / "results.csv"
 
-# Updated to the flattened "wide" format
+# Updated to the flattened "wide" format supporting up to 5 iterations
 CSV_FIELDS = [
     "run_id", "timestamp", "model_name", "provider", "tier", 
     "prompt_name", "prompt_preview", "api_status", "iterations_needed",
     "it1_json_syntax_valid", "it1_pydantic_valid", "it1_matlab_status", "it1_failure_stage", "it1_error_message",
     "it2_json_syntax_valid", "it2_pydantic_valid", "it2_matlab_status", "it2_failure_stage", "it2_error_message",
     "it3_json_syntax_valid", "it3_pydantic_valid", "it3_matlab_status", "it3_failure_stage", "it3_error_message",
+    "it4_json_syntax_valid", "it4_pydantic_valid", "it4_matlab_status", "it4_failure_stage", "it4_error_message",
+    "it5_json_syntax_valid", "it5_pydantic_valid", "it5_matlab_status", "it5_failure_stage", "it5_error_message",
     "run_dir"
 ]
 
@@ -33,7 +35,8 @@ def log_evaluation_run(
     prompt: str,
     api_status: str,
     iterations_needed: int,
-    iteration_data: List[Dict[str, Any]]
+    iteration_data: List[Dict[str, Any]],
+    verbose: bool = False
 ):
     init_tracker()
 
@@ -60,7 +63,7 @@ def log_evaluation_run(
     }
 
     # Initialize all iteration columns to empty strings/defaults
-    for i in range(1, 4):
+    for i in range(1, 6):
         row[f"it{i}_json_syntax_valid"] = ""
         row[f"it{i}_pydantic_valid"] = ""
         row[f"it{i}_matlab_status"] = ""
@@ -87,4 +90,5 @@ def log_evaluation_run(
         writer = csv.DictWriter(f, fieldnames=CSV_FIELDS)
         writer.writerow(row)
 
-    print(f"[TRACKER] Run logged to {CSV_PATH} (Run ID: {run_id})")
+    if verbose:
+        print(f"[TRACKER] Run logged to {CSV_PATH} (Run ID: {run_id})")

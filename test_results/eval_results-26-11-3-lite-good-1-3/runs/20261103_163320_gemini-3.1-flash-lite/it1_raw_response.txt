@@ -1,0 +1,54 @@
+{
+  "Basic": {
+    "Fs": 30000,
+    "Fbase": 60.0,
+    "Sbase": 1.0,
+    "Vbase": 1.0
+  },
+  "Advance": {
+    "DiscretizationMethod": 2,
+    "PowerFlowAlgorithm": 2
+  },
+  "Bus": [
+    {"BusNo": 1, "BusType": 1, "Voltage": 1.03, "PGi": 10.0, "PLi": 11.04, "QLi": 2.50},
+    {"BusNo": 2, "BusType": 3}, {"BusNo": 3, "BusType": 3}, {"BusNo": 4, "BusType": 3}, {"BusNo": 5, "BusType": 3},
+    {"BusNo": 6, "BusType": 3}, {"BusNo": 7, "BusType": 3}, {"BusNo": 8, "BusType": 3}, {"BusNo": 9, "BusType": 3},
+    {"BusNo": 10, "BusType": 3}, {"BusNo": 11, "BusType": 3}, {"BusNo": 12, "BusType": 3}, {"BusNo": 13, "BusType": 3},
+    {"BusNo": 14, "BusType": 3}, {"BusNo": 15, "BusType": 3}, {"BusNo": 16, "BusType": 3}, {"BusNo": 17, "BusType": 3},
+    {"BusNo": 18, "BusType": 3}, {"BusNo": 19, "BusType": 3}, {"BusNo": 20, "BusType": 3}, {"BusNo": 21, "BusType": 3},
+    {"BusNo": 22, "BusType": 3}, {"BusNo": 23, "BusType": 3}, {"BusNo": 24, "BusType": 3}, {"BusNo": 25, "BusType": 3},
+    {"BusNo": 26, "BusType": 3}, {"BusNo": 27, "BusType": 3}, {"BusNo": 28, "BusType": 3}, {"BusNo": 29, "BusType": 3},
+    {"BusNo": 30, "BusType": 2, "Voltage": 1.0475, "PGi": 2.5},
+    {"BusNo": 31, "BusType": 2, "Voltage": 0.9820, "PGi": 5.729},
+    {"BusNo": 32, "BusType": 2, "Voltage": 0.9831, "PGi": 6.5},
+    {"BusNo": 33, "BusType": 2, "Voltage": 0.9972, "PGi": 6.32},
+    {"BusNo": 34, "BusType": 2, "Voltage": 1.0123, "PGi": 5.08},
+    {"BusNo": 35, "BusType": 2, "Voltage": 1.0493, "PGi": 6.5},
+    {"BusNo": 36, "BusType": 2, "Voltage": 1.0635, "PGi": 5.6},
+    {"BusNo": 37, "BusType": 2, "Voltage": 1.0278, "PGi": 5.4},
+    {"BusNo": 38, "BusType": 2, "Voltage": 1.0265, "PGi": 8.3},
+    {"BusNo": 39, "BusType": 3}
+  ],
+  "NetworkLine": [
+    {"FromBus": 2, "ToBus": 30, "TurnsRatio": 1.025},
+    {"FromBus": 31, "ToBus": 6, "TurnsRatio": 0.9},
+    {"FromBus": 19, "ToBus": 33, "TurnsRatio": 1.05},
+    {"FromBus": 20, "ToBus": 34, "TurnsRatio": 1.05},
+    {"FromBus": 22, "ToBus": 35, "TurnsRatio": 1.07},
+    {"FromBus": 23, "ToBus": 36, "TurnsRatio": 1.07},
+    {"FromBus": 25, "ToBus": 37, "TurnsRatio": 1.07},
+    {"FromBus": 29, "ToBus": 38, "TurnsRatio": 1.07}
+  ],
+  "Apparatus": [
+    {"BusNo": 1, "Type": 11, "ParaOverrides": {"V_dc": 2.2, "C_dc": 2.2, "f_v_dc": 0.01}},
+    {"BusNo": 30, "Type": 20, "ParaOverrides": {"wLf": 0.05, "Rf": 0.0, "wCf": 0.02, "wLc": 0.1, "Rc": 0.0, "Xov": 0.0, "Dw": 50.0, "fdroop": 4.2, "fvdq": 300.0, "fidq": 1000.0}},
+    {"BusNo": 31, "Type": 20, "ParaOverrides": {"wLf": 0.05, "Rf": 0.0, "wCf": 0.02, "wLc": 0.1, "Rc": 0.0, "Xov": 0.0, "Dw": 50.0, "fdroop": 3.03, "fvdq": 300.0, "fidq": 1000.0}},
+    {"BusNo": 32, "Type": 20, "ParaOverrides": {"wLf": 0.05, "Rf": 0.0, "wCf": 0.02, "wLc": 0.1, "Rc": 0.0, "Xov": 0.0, "Dw": 50.0, "fdroop": 3.58, "fvdq": 300.0, "fidq": 1000.0}},
+    {"BusNo": 33, "Type": 20, "ParaOverrides": {"wLf": 0.05, "Rf": 0.0, "wCf": 0.02, "wLc": 0.1, "Rc": 0.0, "Xov": 0.0, "Dw": 50.0, "fdroop": 2.86, "fvdq": 300.0, "fidq": 1000.0}},
+    {"BusNo": 34, "Type": 20, "ParaOverrides": {"wLf": 0.05, "Rf": 0.0, "wCf": 0.02, "wLc": 0.1, "Rc": 0.0, "Xov": 0.0, "Dw": 50.0, "fdroop": 2.60, "fvdq": 300.0, "fidq": 1000.0}},
+    {"BusNo": 35, "Type": 11, "ParaOverrides": {"V_dc": 2.2, "C_dc": 2.2, "f_v_dc": 0.01}},
+    {"BusNo": 36, "Type": 11, "ParaOverrides": {"V_dc": 2.2, "C_dc": 2.2, "f_v_dc": 0.01}},
+    {"BusNo": 37, "Type": 11, "ParaOverrides": {"V_dc": 2.2, "C_dc": 2.2, "f_v_dc": 0.01}},
+    {"BusNo": 38, "Type": 11, "ParaOverrides": {"V_dc": 2.2, "C_dc": 2.2, "f_v_dc": 0.01}}
+  ]
+}

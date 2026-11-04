@@ -1,0 +1,7 @@
+Model a classical single machine infinite bus (SMIB) system in SimplusGT at 60 Hz.
+
+- Simulation settings: Fs = 60000 Hz, Fbase = 60.0 Hz, Gauss-Seidel power flow algorithm.
+- Bus 1 is the infinite bus (Type 90) held at 0.995 pu voltage acting as the system slack bus.
+- Bus 2 is connected to Bus 1 through a lossless transmission line with inductive reactance wL = 0.65 pu (R = 0, wC = 0).
+- A 2nd-order synchronous generator (Type 0) is connected at Bus 2, supplying 0.9 pu active power and 0.3 pu reactive power at 1.0 pu terminal voltage.
+- Machine parameters: inertia J = 3.5, damping D = 10.0, stator reactance wL = 0.3 pu, stator resistance R = 0.003 pu.

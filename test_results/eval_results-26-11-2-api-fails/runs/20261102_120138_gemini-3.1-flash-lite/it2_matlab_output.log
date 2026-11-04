@@ -1,0 +1,194 @@
+
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+Print power flow result:
+The format below is "| bus | P | Q | V | angle | omega |". P and Q are in load convention.
+
+ListPowerFlow =
+
+    1.0000   -0.9617   -0.1323    1.0600         0  376.9911
+    2.0000   -0.4000    0.0064    1.0450   -0.0272  376.9911
+    3.0000   -0.0000    0.3104    1.0100   -0.0551  376.9911
+    4.0000    0.4780   -0.0390    1.0288   -0.0963  376.9911
+    5.0000    0.0760    0.0160    1.0351   -0.0840  376.9911
+    6.0000   -0.0000   -0.3153    1.0700   -0.1622  376.9911
+    7.0000   -0.0000   -0.0000    1.0553   -0.1489  376.9911
+    8.0000   -0.0000   -0.2146    1.0900   -0.1489  376.9911
+    9.0000    0.2950    0.1660    1.0487   -0.1760  376.9911
+   10.0000    0.0900    0.0580    1.0450   -0.1785  376.9911
+   11.0000    0.0350    0.0180    1.0538   -0.1726  376.9911
+   12.0000    0.0610    0.0160    1.0547   -0.1773  376.9911
+   13.0000    0.1350    0.0580    1.0493   -0.1787  376.9911
+   14.0000    0.1490    0.0500    1.0309   -0.1948  376.9911
+
+Get the descriptor state space model of network lines...
+Get the descriptor state space model of bus apparatuses...
+Get the appended descriptor state space model of all apparatuses...
+Get the descriptor state space model of whole system...
+Check if the whole system is proper:
+Proper!
+Calculate the minimum realization of the system model for later use...
+
+Print state space model: 
+Whole system port model (descriptor state space): GsysDss
+Print ports of GsysDss:
+
+  Model state in order:
+    Apparatus 1:
+        (1) xi_1, (2) xi_2
+    Apparatus 3:
+        (3) epsilon3, (4) i_ld3, (5) i_lq3, (6) i_ld_i3, (7) i_lq_i3, (8) v_od3, 
+        (9) v_oq3, (10) v_od_i3, (11) v_oq_i3, (12) i_od3, (13) i_oq3, (14) v_d_ref3, 
+        (15) w3, (16) theta3
+    Apparatus 6:
+        (17) epsilon6, (18) i_ld6, (19) i_lq6, (20) i_ld_i6, (21) i_lq_i6, (22) v_od6, 
+        (23) v_oq6, (24) v_od_i6, (25) v_oq_i6, (26) i_od6, (27) i_oq6, (28) v_d_ref6, 
+        (29) w6, (30) theta6
+    Apparatus 8:
+        (31) epsilon8, (32) i_ld8, (33) i_lq8, (34) i_ld_i8, (35) i_lq_i8, (36) v_od8, 
+        (37) v_oq8, (38) v_od_i8, (39) v_oq_i8, (40) i_od8, (41) i_oq8, (42) v_d_ref8, 
+        (43) w8, (44) theta8
+    Network line:
+        (45) id1-2, (46) iq1-2, (47) id1-5, (48) iq1-5, (49) id1-2, (50) iq1-2, 
+        (51) id1-5, (52) iq1-5, (53) id1-2, (54) iq1-2, (55) id1-2, (56) iq1-2, 
+        (57) id2-3, (58) iq2-3, (59) id2-4, (60) iq2-4, (61) id2-5, (62) iq2-5, 
+        (63) id2-3, (64) iq2-3, (65) id2-4, (66) iq2-4, (67) id2-5, (68) iq2-5, 
+        (69) id2-3, (70) iq2-3, (71) id2-3, (72) iq2-3, (73) id3-4, (74) iq3-4, 
+        (75) id3-4, (76) iq3-4, (77) id2-4, (78) iq2-4, (79) id3-4, (80) iq3-4, 
+        (81) id2-4, (82) iq2-4, (83) id3-4, (84) iq3-4, (85) vd4-4, (86) vq4-4, 
+        (87) xi4-4, (88) xi4-4, (89) id4-5, (90) iq4-5, (91) id4-7, (92) iq4-7, 
+        (93) id4-9, (94) iq4-9, (95) id4-5, (96) iq4-5, (97) id4-7, (98) iq4-7, 
+        (99) id4-9, (100) iq4-9, (101) id1-5, (102) iq1-5, (103) id2-5, (104) iq2-5, 
+        (105) id4-5, (106) iq4-5, (107) id1-5, (108) iq1-5, (109) id2-5, (110) iq2-5, 
+        (111) id4-5, (112) iq4-5, (113) xi5-5, (114) xi5-5, (115) id5-5, (116) iq5-5, 
+        (117) id5-6, (118) iq5-6, (119) id5-6, (120) iq5-6, (121) id5-6, (122) iq5-6, 
+        (123) id5-6, (124) iq5-6, (125) id6-11, (126) iq6-11, (127) id6-12, (128) iq6-12, 
+        (129) id6-13, (130) iq6-13, (131) id6-11, (132) iq6-11, (133) id6-12, (134) iq6-12, 
+        (135) id6-13, (136) iq6-13, (137) id4-7, (138) iq4-7, (139) id4-7, (140) iq4-7, 
+        (141) id7-8, (142) iq7-8, (143) id7-9, (144) iq7-9, (145) id7-8, (146) iq7-8, 
+        (147) id7-9, (148) iq7-9, (149) id7-8, (150) iq7-8, (151) id7-8, (152) iq7-8, 
+        (153) id4-9, (154) iq4-9, (155) id7-9, (156) iq7-9, (157) id4-9, (158) iq4-9, 
+        (159) id7-9, (160) iq7-9, (161) vd9-9, (162) vq9-9, (163) xi9-9, (164) xi9-9, 
+        (165) id9-9, (166) iq9-9, (167) id9-10, (168) iq9-10, (169) id9-14, (170) iq9-14, 
+        (171) id9-10, (172) iq9-10, (173) id9-14, (174) iq9-14, (175) id9-10, (176) iq9-10, 
+        (177) id9-10, (178) iq9-10, (179) xi10-10, (180) xi10-10, (181) id10-10, (182) iq10-10, 
+        (183) id10-11, (184) iq10-11, (185) id10-11, (186) iq10-11, (187) id6-11, (188) iq6-11, 
+        (189) id10-11, (190) iq10-11, (191) id6-11, (192) iq6-11, (193) id10-11, (194) iq10-11, 
+        (195) xi11-11, (196) xi11-11, (197) id11-11, (198) iq11-11, (199) id6-12, (200) iq6-12, 
+        (201) id6-12, (202) iq6-12, (203) xi12-12, (204) xi12-12, (205) id12-12, (206) iq12-12, 
+        (207) id12-13, (208) iq12-13, (209) id12-13, (210) iq12-13, (211) id6-13, (212) iq6-13, 
+        (213) id12-13, (214) iq12-13, (215) id6-13, (216) iq6-13, (217) id12-13, (218) iq12-13, 
+        (219) xi13-13, (220) xi13-13, (221) id13-13, (222) iq13-13, (223) id13-14, (224) iq13-14, 
+        (225) id13-14, (226) iq13-14, (227) id9-14, (228) iq9-14, (229) id13-14, (230) iq13-14, 
+        (231) id9-14, (232) iq9-14, (233) id13-14, (234) iq13-14, (235) xi14-14, (236) xi14-14, 
+        (237) id14-14, (238) iq14-14, (239) xi_1, (240) xi_2, (241) xi_3, (242) xi_4, 
+        (243) xi_5, (244) xi_6, (245) xi_7, (246) xi_8, (247) xi_9, (248) xi_10, 
+        (249) xi_11, (250) xi_12, (251) xi_13, (252) xi_14, (253) xi_15, (254) xi_16, 
+        (255) xi_17, (256) xi_18, (257) xi_19, (258) xi_20, (259) xi_21, (260) xi_22, 
+        (261) xi_23, (262) xi_24, (263) xi_25, (264) xi_26, (265) xi_27, (266) xi_28
+
+  Model input in order:
+    Bus 1:
+        (1) v_d1, (2) v_q1
+    Bus 2:
+        (3) v_d2, (4) v_q2
+    Bus 3:
+        (5) v_d3, (6) v_q3, (7) P03
+    Bus 4:
+        (8) v_d4, (9) v_q4
+    Bus 5:
+        (10) v_d5, (11) v_q5
+    Bus 6:
+        (12) v_d6, (13) v_q6, (14) P06
+    Bus 7:
+        (15) v_d7, (16) v_q7
+    Bus 8:
+        (17) v_d8, (18) v_q8, (19) P08
+    Bus 9:
+        (20) v_d9, (21) v_q9
+    Bus 10:
+        (22) v_d10, (23) v_q10
+    Bus 11:
+        (24) v_d11, (25) v_q11
+    Bus 12:
+        (26) v_d12, (27) v_q12
+    Bus 13:
+        (28) v_d13, (29) v_q13
+    Bus 14:
+        (30) v_d14, (31) v_q14
+
+  Model output in order:
+    Bus 1:
+        (1) i_d1, (2) i_q1, (3) w1
+    Bus 2:
+        (4) i_d2, (5) i_q2
+    Bus 3:
+        (6) i_d3, (7) i_q3, (8) w3, (9) theta3
+    Bus 4:
+        (10) i_d4, (11) i_q4
+    Bus 5:
+        (12) i_d5, (13) i_q5
+    Bus 6:
+        (14) i_d6, (15) i_q6, (16) w6, (17) theta6
+    Bus 7:
+        (18) i_d7, (19) i_q7
+    Bus 8:
+        (20) i_d8, (21) i_q8, (22) w8, (23) theta8
+    Bus 9:
+        (24) i_d9, (25) i_q9
+    Bus 10:
+        (26) i_d10, (27) i_q10
+    Bus 11:
+        (28) i_d11, (29) i_q11
+    Bus 12:
+        (30) i_d12, (31) i_q12
+    Bus 13:
+        (32) i_d13, (33) i_q13
+    Bus 14:
+        (34) i_d14, (35) i_q14
+
+Other models saved in workspace: 
+Whole system port model (state space): GsysSs
+Whole system admittance model (descriptor state space): YsysDss
+Whole system admittance model (state space): YsysSs
+
+Calculate pole/zero...
+Check if the system is stable:
+Stable!
+
+==================================
+Plot Fundamentals 
+==================================
+
+Plot Fundamentals:
+Plot pole map...
+Plot admittance spectrum...
+
+==================================
+Grid Strength Analysis
+==================================
+Plot grid strength.
+
+==================================
+Synchronization Analysis
+==================================
+Warning: The synchronisation analysis is disabled.
+
+=================================
+Simulink Model
+=================================
+Warning: The auto creation of simulink model is disabled.
+
+==================================
+End: Run Successfully.
+==================================
+

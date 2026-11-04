@@ -1,0 +1,24 @@
+Configure the standard IEEE 57-bus transmission benchmark system for SimplusGT running at 60 Hz.
+
+System Settings:
+- Base Grid Frequency: 60.0 Hz, Sampling Frequency: 30000 Hz, Newton-Raphson power flow (Algorithm 2), DiscretizationMethod: 2 (Backward Euler).
+- 57 buses total with 80 transmission branches/transformers.
+
+Generation Assets (7 Synchronous Machines, Type 0):
+- Bus 1 (Slack Bus): Voltage = 1.04 pu, PGi = 1.289 pu, PLi = 0.55 pu, QLi = 0.17 pu. Machine parameters: J = 14.0, D = 40.0, stator wL = 0.075 pu, stator R = 0.0125 pu.
+- Bus 2 (PV Bus / Synchronous Condenser): Voltage = 1.01 pu, PGi = 0.0 pu, PLi = 0.03 pu, QLi = 0.88 pu, Qmin = -0.17, Qmax = 0.5. Machine: J = 3.5, D = 10.0, wL = 0.3 pu, R = 0.05 pu.
+- Bus 3 (PV Bus): Voltage = 0.985 pu, PGi = 0.40 pu, PLi = 0.41 pu, QLi = 0.21 pu, Qmin = -0.1, Qmax = 0.6. Machine: J = 0.35, D = 1.0, wL = 0.3 pu, R = 0.05 pu.
+- Bus 6 (PV Bus / Synchronous Condenser): Voltage = 0.98 pu, PGi = 0.0 pu, PLi = 0.75 pu, QLi = 0.02 pu, Qmin = -0.08, Qmax = 0.25. Machine: J = 3.5, D = 10.0, wL = 0.3 pu, R = 0.05 pu.
+- Bus 8 (PV Bus): Voltage = 1.005 pu, PGi = 4.50 pu, PLi = 1.50 pu, QLi = 0.22 pu, Qmin = -1.4, Qmax = 2.0. Machine: J = 3.5, D = 10.0, wL = 0.3 pu, R = 0.05 pu.
+- Bus 9 (PV Bus / Synchronous Condenser): Voltage = 0.98 pu, PGi = 0.0 pu, PLi = 1.21 pu, QLi = 0.26 pu, Qmin = -0.03, Qmax = 0.09. Machine: J = 3.5, D = 10.0, wL = 0.3 pu, R = 0.05 pu.
+- Bus 12 (PV Bus): Voltage = 1.015 pu, PGi = 3.10 pu, PLi = 3.77 pu, QLi = 0.24 pu, Qmin = -1.5, Qmax = 1.55. Machine: J = 3.5, D = 10.0, wL = 0.3 pu, R = 0.05 pu.
+
+Passive Shunt Compensation:
+- Model fixed shunt capacitor banks on the following buses as self-branches in NetworkLine (FromBus == ToBus, series R and wL set to 'NaN'):
+  * Bus 18: Shunt susceptance wC = 0.10 pu
+  * Bus 25: Shunt susceptance wC = 0.059 pu
+  * Bus 53: Shunt susceptance wC = 0.063 pu
+
+Intermediate Buses & Network:
+- All remaining buses (Buses 4, 5, 7, 10, 11, 13-57) are PQ load or switching buses (Apparatus Type 100).
+- Include all transmission lines and off-nominal transformer tap changers (such as Line 4-18 with tap=0.97, Line 24-26 with tap=1.043, Line 7-29 with tap=0.967, and Line 10-51 with tap=0.93).

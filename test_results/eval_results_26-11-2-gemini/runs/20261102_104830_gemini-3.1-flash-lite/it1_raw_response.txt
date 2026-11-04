@@ -1,0 +1,42 @@
+{
+  "Basic": {
+    "Fbase": 60.0
+  },
+  "Bus": [
+    {
+      "BusNo": 1,
+      "BusType": 1,
+      "Voltage": 1.0
+    },
+    {
+      "BusNo": 2,
+      "BusType": 2,
+      "PGi": 0.8
+    }
+  ],
+  "NetworkLine": [
+    {
+      "FromBus": 1,
+      "ToBus": 2,
+      "R": 0.0,
+      "wL": 0.5
+    },
+    {
+      "FromBus": 2,
+      "ToBus": 2,
+      "R": "NaN",
+      "wL": "NaN",
+      "wC": 0.1
+    }
+  ],
+  "Apparatus": [
+    {
+      "BusNo": 1,
+      "Type": 90
+    },
+    {
+      "BusNo": 2,
+      "Type": 0
+    }
+  ]
+}

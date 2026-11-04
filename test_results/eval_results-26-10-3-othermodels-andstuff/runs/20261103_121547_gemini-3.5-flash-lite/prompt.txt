@@ -1,0 +1,26 @@
+Configure the classic Western System Coordinating Council (WSCC) 3-machine, 9-bus benchmark system for SimplusGT at 60 Hz.
+
+Topology Overview:
+- Base MVA is 100 MVA, 60 Hz system.
+- Three generation stations:
+  * Bus 1: Slack generator operating at 1.04 p.u. voltage. Connects to Bus 4 via a step-up transformer (X = 0.0576 p.u.). Generator inertia J = 23.64, damping D = 5.91.
+  * Bus 2: PV generator outputting 163 MW at 1.025 p.u. voltage. Connects to Bus 7 via a step-up transformer (X = 0.0625 p.u.). Generator inertia J = 6.4, damping D = 1.6.
+  * Bus 3: PV generator outputting 85 MW at 1.025 p.u. voltage. Connects to Bus 9 via a step-up transformer (X = 0.0586 p.u.). Generator inertia J = 3.01, damping D = 0.7525.
+  * Model all three generators as 2nd-order Synchronous Machines (Type 0) with small stator impedances (R = 0.0001, wL = 0.0001).
+
+Transmission Ring (230 kV high-voltage network):
+  * Bus 4 to Bus 5: R = 0.0100, X = 0.0850, total line charging B = 0.176 p.u.
+  * Bus 4 to Bus 6: R = 0.0170, X = 0.0920, total line charging B = 0.158 p.u.
+  * Bus 5 to Bus 7: R = 0.0320, X = 0.1610, total line charging B = 0.306 p.u.
+  * Bus 6 to Bus 9: R = 0.0390, X = 0.1700, total line charging B = 0.358 p.u.
+  * Bus 7 to Bus 8: R = 0.0085, X = 0.0720, total line charging B = 0.149 p.u.
+  * Bus 8 to Bus 9: R = 0.0119, X = 0.1008, total line charging B = 0.209 p.u.
+
+Lumped System Loads:
+  * Bus 5 (Station A): 125 MW, 50 MVAR inductive load.
+  * Bus 6 (Station B): 90 MW, 30 MVAR inductive load.
+  * Bus 8 (Station C): 100 MW, 35 MVAR inductive load.
+  * Buses 4, 7, and 9 are non-load switching/floating buses.
+
+Solver Settings:
+- Use Newton-Raphson power flow and enable Simulink model generation. Set sampling frequency to 30 kHz.

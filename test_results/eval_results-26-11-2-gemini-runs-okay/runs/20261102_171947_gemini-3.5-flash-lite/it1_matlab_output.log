@@ -1,0 +1,43 @@
+
+==================================
+Check User Data File
+==================================
+UserData.json is used for analysis.
+/var/home/burgerking/Documents/MATLAB/Simplus-Grid-Tool-master/UserData.json
+
+==================================
+Start: Run Simplus Grid Tool
+==================================
+Loading data, please wait a second...
+Do the power flow analysis...
+Print power flow result:
+The format below is "| bus | P | Q | V | angle | omega |". P and Q are in load convention.
+
+ListPowerFlow =
+
+    1.0000   -2.3267    0.0947    1.0600         0  376.9911
+    2.0000   -0.1830   -0.5089    1.0450   -0.0876  376.9911
+    3.0000    0.9420    0.0000    0.9986   -0.2220  376.9911
+    4.0000    0.4780   -0.0390    1.0126   -0.1808  376.9911
+    5.0000    0.0760    0.0160    1.0151   -0.1539  376.9911
+    6.0000    0.1120   -0.0803    1.0700   -0.2497  376.9911
+    7.0000   -0.0000   -0.0000    1.0592   -0.2342  376.9911
+    8.0000   -0.0000   -0.1904    1.0900   -0.2342  376.9911
+    9.0000    0.2950    0.1660    1.0537   -0.2618  376.9911
+   10.0000    0.0900    0.0580    1.0492   -0.2646  376.9911
+   11.0000    0.0350    0.0180    1.0560   -0.2595  376.9911
+   12.0000    0.0610    0.0160    1.0550   -0.2647  376.9911
+   13.0000    0.1350    0.0580    1.0501   -0.2660  376.9911
+   14.0000    0.1490    0.0500    1.0341   -0.2811  376.9911
+
+Get the descriptor state space model of network lines...
+
+Error using SimplusGT.Toolbox.YbusCalcDss
+Error: Ac mutual branch 12 contains C and/or G
+
+Error in SimplusGT.Toolbox.Main (line 145)
+[ObjYbusDss,YbusDss,~] = SimplusGT.Toolbox.YbusCalcDss(ListBusNew,ListLineNew,Wbase);
+
+Error in UserMain (line 54)
+SimplusGT.Toolbox.Main();  
+
